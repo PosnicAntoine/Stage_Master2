@@ -1,0 +1,482 @@
+\documentclass{rapport}
+\usepackage{lmodern,textcomp}
+\usepackage{lipsum}
+\usepackage{float}
+\title{Rapport Stage Antoine POSNIC M1} %Titre du fichier
+
+\begin{document}
+
+%----------- Informations du rapport ---------
+
+\titre{Consultant Centre de Contact (CTI)} %Titre du fichier .pdf
+\UE{Rapport de stage} %Nom de la UE
+\sujet{Du 04/03/2019 au 30/08/2019} %Nom du sujet
+
+\eleves{Antoine \textsc{POSNIC}} %Nom des élèves
+
+\enseignant{Gilles \textsc{LESVENTES}\\
+        	Ophélie \textsc{GAUTIER}} %Nom de l'enseignant
+
+
+%----------- Initialisation -------------------
+        
+\fairemarges %Afficher les marges
+\fairepagedegarde %Créer la page de garde
+\tabledematieres %Créer la table de matières
+
+%------------ Preface----------------
+\section*{Remerciements}
+Avant toute chose, je tiens à remercier l'équipe pédagogique du Master 2 IL pour la formation qui m'a été donnée, ainsi que le moyen d'effectuer ce stage.\\
+Je remercie bien évidemment l'équipe des Ressources Humaines de Capgemini Rennes, qui m'ont aidé et fait confiance pour mon retour dans l'entreprise après mon stage de Master 1.\\
+Je remercie Ophélie GAUTIER et son équipe, pour m'avoir accepté et accueilli dans ce projet. ainsi que les différents membres du cluster* Centres de contacts (CTI) de Capgemini Rennes.\\
+Ils m'ont permis de m'intégrer rapidement dans le groupe, ont répondu à toutes mes interrogations, et m'ont permis de progresser.\\
+Finalement, je tiens à remercier Brigitte BACHELOT, pour le partages des informations de rédactions pour ce rapport.
+\newpage
+\section*{Preface}
+Cette préface a pour but d'introduire mon stage ainsi que l'entreprise. Je commencerai par annoncer le contexte dans lequel j'ai effectué mon stage, le sujet et les objectifs de ce dernier, ainsi qu'un bref descriptif de l'entreprise. Enfin, je finirai sur le plan du rapport.
+
+\subsection*{Contexte}
+
+Pour valider ma fin de deuxième année de Master Ingénierie Logicielle, j'ai effectué un stage chez Capgemini, une ESN (Entreprise de Services du Numérique) s'imposant à l'international. Ce stage de six mois s'est déroulé du 04 mars au 30 août 2019. Il a eu lieu sur le site de Rennes, au sein de la people unit* CSD (Custom Software Development).
+Lors de ma recherche de stage, plusieurs entreprises se sont montrées ouvertes à mes candidatures. Mais Capgemini a finalement réussi à me convaincre notamment grâce à mon expérience précédente passée chez eux lors de mon stage de Master 1.
+\\
+
+Mon but était de d'expérimenter d'avantage la vie en entreprise, en intégrant à part entière une équipe. Tout en continuant à découvrir de nouvelles technologies non-traitées lors de mes 5 années en université.
+\\
+Mes demandes pour accepter le stage se résumaient en deux points primordiaux.
+Je voulais dans un premier temps participer entièrement a la vie du projet que j'allais rejoindre, pas de petits projet pour stagiaires dans un coin pour expérimenter des solutions qui pourraient peut être bénéficier le réel projet dans le futur. Je voulait participer et expérimenter le vrai travail d'un développeur au sein d'une véritable équipe.
+Ensuite tout comme l'année précédente, j'ai demandé d'être assigné a un projet sur des technologies que je n'avais pour le moment pas touché. L'année précédente il s'agissait du C++ couplé au framework Qt, cette année il me restais encore le C\# avec le framework .NET sur ma liste de technologies à découvrir.\\
+Sous l'écoute de mes exigences, les équipes de ressources humaines de Capgemini m'ont rapidement orienté vers un sujet de stage spécifique. Comme il s'agit d'une grande entreprise, les projets acceptant des stagiaires étaient nombreux. Cependant, une grande majorité de ces projets étaient orientés Java/JEE, mais je voulais quelque chose de nouveau.\\
+
+Ainsi je me suis vue attitré un projet, comme désiré, en C\#/.NET avec la mission de consultant pour les centres de contactes du groupe Crédit Agricole. Ce projet existe chez Capgemini depuis prés de 10 ans après avoir été repris de Niji, pour maintenir et faire évoluer les besoins de leurs solutions de centres de contacts. Avec ce thème de stage, j'étais motivé pour participer aux actions de l'équipe sur ce projet, où je découvrirait de nouvelles technologies.
+
+\subsection*{Annonce du plan}
+
+Ce rapport a pour but de présenter le déroulement de mon stage chez Capgemini. Il vient donc de bon sens de commencer par présenter cette dernière, son rôle à l'international et ses avantages.
+Un chapitre seras dédier à la définition et l'explication d'un centre de contact.\\
+J'expliquerai ensuite en quoi consiste le projet Pacifica, agrémenté de points techniques sur son fonctionnement.
+Ensuite, j'aborderai le cadre dans lequel j'ai effectué mon stage, l'équipe avec qui j'ai travaillé ainsi que son organisation.\\
+Et pour finir, la dernière partie abordera de mes activités effectuée durant le stage.
+
+\newpage
+%------------ Corps du rapport ----------------
+
+%---------------- Chapter 1 -------------------
+\section{Capgemini}
+
+Je vais présenter ici l'entreprise Capgemini, dans un premier temps dans sa globalité, pour ensuite me concentrer sur l’activité Rennaise et du grand Ouest. Je retracerai son histoire, son marché, ses activités et les avantages qu'elle peut fournir a ses collaborateurs.
+
+\subsection{A l'international}
+
+A l'origine Française, et créée par Serge Kampf en 1967, Capgemini est aujourd'hui un leader mondial dans l'industrie du conseil et des services informatiques. Anciennement nommée Sogeti (Société pour la Gestion de l'Entreprise et le Traitement de l'Information), c'est en acquérant Gemini Computer Systems en 1974 et CAP en 1975 qu'elle s'approche de son nom actuel avec: Cap Gemini Sogeti. Mais ce ne sera qu'à partir de 2004 que le groupe a changé son nom pour l'actuel «Capgemini».\\
+
+Leur politique d'acquisition les poussent après plus de 50 ans d'existence à détenir un total de plus de 30 entreprises autour du globe, spécialisées dans le secteur des nouvelles technologies. On noteras notamment le rachat cet été d'Altran.
+Estimée à plus de 16 milliards, Capgemini, comptant 200 000 employés, possède prés de 10 000 collaborateurs en France et un important pôle de sous-traitance en Inde. Le reste s’étalant dans plus de 40 pays différents, ce qui peut offrir des opportunités a l'international.
+
+\subsection{Activité}
+
+Capgemini, étant une ESN, s'appuie sur 3 principaux pôles de métiers: le domaine du conseil, des services informatiques et de l'infogérance.
+\begin{itemize}
+  \item \textbf{Conseil ou Consulting Services (CS):} Consiste à diriger ses clients dans les transformations que ces derniers veulent accomplir, que ce soit pour améliorer leur croissance ou leur compétitivité. On parle majoritairement ici, par exemple, de transformation digitale.
+  
+  \item \textbf{Services Informatiques ou Technology Services (TS):} Consiste à concevoir et développer des systèmes demandés par les clients.
+  
+  \item \textbf{Infogérance ou Outsourcing Services(OS):} Consiste à accompagner un client partiellement ou intégralement pour un de ses systèmes. 
+\end{itemize}
+\vspace{5mm}
+Ces trois pôles donnent à Capgemini un réseau important de clients à travers différents secteurs.
+
+\begin{itemize}
+  \item Le secteur publique, avec des clients comme la DGA, ainsi que des administrations telles que le Ministère de la Défense.
+  
+  \item Les services financiers, assurances ou banques comme dans le cadre de mon stage, le Crédit Agricole.
+  
+  \item Le secteur du commerce et du transport, fournissant, par exemple, une plate-forme de e-commerces pour la SNCF.
+  
+  \item Les Télécoms, Médias et divertissements, comme  Orange, SFR, Bouygues, M6 et Canal+ actuellement clients chez Capgemini Rennes.
+  
+  \item Énergies, Utilities et Chimie.
+  
+  \item Industrie, Automobile et Sciences de la vie.
+\end{itemize}
+
+\subsection{Capgemini Rennes}
+
+Le site Capgemini Rennes se situe depuis 2015 sur la ZAC des Champs-Blancs à Cesson-Sévigné, au sein de la pépinière Digital Square. Elle est entourée d'entreprise du secteur digital. \\
+
+On y retrouve 2 principaux groupes nommés peoples units: les CSD (Custom Software Development), plus orientés vers la conception de nouveaux systèmes, et les ADM (Application Developpement Maintenance), pour la maintenance et les évolutions de systèmes déjà délivrés chez le client. En plus, on retrouve une petite partie de DCX (Digital Customer Experience) pour les travaux de consulting, ainsi qu'une équipe de RH et RM (Ressource Manager).\\
+
+On retrouve plus de 1100 collaborateurs sur ce site, pour une moyenne d'âge de 35 ans. Constamment en évolution puisque les équipes de recrutements visent environ 200 nouveaux recrutements chaque année. 
+
+\subsection{Avantages}
+Un tel grand groupe dispose de nombreux avantages.\\
+
+Capgemini Rennes dispose premièrement d'un CE, ayant plus de 50 salariés. Il offre un lieu de vie où des jeux de sociétés et livres sont à disposition, ainsi que divers avantages et réductions pour les employés comme des réductions pour des activités culturelles et sportives, des chèques cadeaux, des réductions pour des billets de Cinéma / Spectacles / Sport / Loisirs...\\
+
+On y retrouve aussi des syndicats, permettant de protéger et/ou informer les employés de la structure des nouvelles mesures mises en place par la direction, ainsi que des inégalités dont ils pourraient être victime. Lors de mon stage,  différents flyers de syndicats on été partagés, informant notamment d'une nouvelle mesure comme par exemple la mise en place d'accords d'intéressements.\\
+
+Capgemini offre des tickets restaurant de 8,60€ payé à 60\% par l'employeur (soit le maximum possible dans la loi Française), une mutuelle, un régime de prévoyance santé, ainsi qu'un complémentaire retraite ou PERCO.\\
+
+Pour les congés, un salarié commence à 25 jours par an en ajoutant une nouvelle journée en fonction de l'ancienneté. On trouve aussi de 8 à 10 RTT par an.\\
+
+Un point important est aussi mis sur les formations. Gros plus pour un développeur, puisqu'il doit pouvoir s'adapter et se mettre à jour dans cet environnement grandissant qu'est l'informatique, restant au goût du jour tout le long de sa carrière. De plus, les certifications qui en découlent sont reconnues dans le monde du travail par le poids que Capgemini a sur le marché.\\
+
+De plus Capgemini conseille fortement l'utilisation des communautés, qui permettent notamment l'échange d'information entre ses différents actifs d'un corps de métier. Par exemple la communauté d'ingénieurs "software engineer" propose des présentation techniques de divers technologies/frameworks.
+
+Les formations et communautés permettent au collaborateurs de ne pas rester cloisonné dans un seul type d'activité, offrant la possibilité à terme d'apprendre et changer de corps de métier.\\
+
+En effet, comme on peut voir sur la figure ci dessous, on a ici la possibilité de diverger vers de nouveaux type de métiers, sous les conseils de son carrière Manager (Un supérieur avec qui le collaborateur peut partager ses désirs d'orientation de carrières au sein du groupe).\\
+
+\insererfigure{fig/fig1_ChoixCarriere.png}{7cm}{Choix de carrières.}{Carriere}
+
+Enfin, comme il s'agit d'une ESN touchant à un large horizon de projets, les RM affirment être disponibles pour assurer une possible migration vers d'autres projets. 
+
+\subsection{Conclusion}
+
+Capgemini est une grande entreprise réputée dans le monde du Digital. Sa taille offre une diversité non négligeable de projets, la qualifiant ainsi souvent d'une entreprise initiatique pour de nouveaux arrivant dans le monde du numérique.
+Elle offre de nombreux avantages, et promet une flexibilité dans le plan de carrière de ses collaborateurs.
+
+\newpage
+
+%---------------- Chapter 2 -------------------
+\section{Centres de contact}
+
+Lors de ce stage j'ai travaillé autour des solutions pour une centre de contacte. Il devient donc important dans un premier temps d'expliquer ce qu'est un centre de contact, ainsi que de définir les tenants et aboutissants d'une telle infrastructure.\\
+Ainsi, dans une première partie, nous allons décrire le travail d'un centre de contact ainsi que les rôles qu'elle peuvent jouer pour une entreprise.\\
+Ensuite nous allons parler de l'organisation de ces centres de contacts, de leur fonctionnement, et les divers solution digitales disponible pour la coordination de ces derniers.\\
+Pour finir avec un exemple concret autour de la solution utilisée dans le cadre de mon projet.
+
+\subsection{Définition et rôles d'un centre de contact}
+
+Un centre de contact peut être visualisé comme une interface entre une entreprise et ses clients. Ils offrent divers services pour ces derniers. Que ce soit, fournir des informations, prendre des rendez-vous ou encore offrir une assistance.\\
+
+Ils jouent ainsi un rôle primordial dans l'entretien de sa clientèle, offrant des services parfois primordiaux.
+Les actions d'un centre de contact peuvent être large, et varie énormément selon l'activité de l'entreprise qu'elles servent. Par exemple:\\
+
+Un centre de contact d'un grand groupe d'assurance, fourniras une assistance administrative dans le cadre d'un sinistre, délivreras des attestation de couvertures sociale (par exemple), ou encore offriras des moyens de modifier son contrat d'assurance.\\
+
+Tandis qu'un centre de contact destiné a un grand revendeur mondial s'occupera plutôt de Services Après Ventes (SAV) et gestion de commandes.
+De part leur nature, ces centres se veulent facile d'accès pour leurs clients. C'est pourquoi ils offrent généralement de nombreuses techniques pour les interroger (mails, téléphone, chat-boxes, etc...). Cela pose donc des soucis de coordination et orchestration des données.
+Ce que nous allons traiter dans cette seconde partie.
+
+\subsection{La technique derrière un centre de contacts}
+
+Le terme centre de contacts définis une activité industrialisé du contact client. Il s'agit alors d'un secteur à part entière d'une entreprise, avec ses propres systèmes et techniques.
+D'un point de vue structurel, les centres de contacts à l'échelle industrielle reste généralement les mêmes.\\
+
+Ils se comportent de divers centres de services clients, où sont employé des opérateurs formés à répondre à certains types de problématiques dont les clients on besoin. Ainsi, chaque demandes doit être analysées pour être dirigé vers un opérateur compétent. Pour cela, il existe divers solutions logiciels pour répondre au problématiques des centres de contacts\\
+
+Chacune possédant leurs propres spécifications, ces solutions cherchent à répondre au différents besoins métiers de leur clients.
+On retrouve par exemple des techniques pour constamment améliorer la satisfaction client. On peut y retrouver par exemple un système de monitoring afin d'évaluer les performances du service. Ou encore une planification horaire pour concilier les périodes de pointes, et emplois du temps des opérateurs.\\
+
+Ces solutions logiciels sont nombreuses. On retrouve par exemple:
+Avaya; Genesys; Cisco; Odigo...
+Dans le cadre de mon stage c'est la solution Genesys qui est implémenté afin d'offrir des applications d'administration et d'interaction avec son noyau.
+
+\subsection{La solution Genesys}
+
+Développé par l'entreprise du même nom, Genesys est un concentré de solutions pour l'orchestration de centres de contact. Il offre des fonctionnalités: de management d'opérateurs, de routages de requêtes vers des ressources adaptées, ainsi que du monitoring de performances pour l'assurance de la satisfaction client.\\
+
+\insererfigure{fig/fig2_LogoGenesys.png}{3cm}{Logo Genesys}{Logo Genesys}
+
+Genesys est ainsi un énorme logicielle composé d'une multitude de services et autres solutions qui peuvent, moyennant des licences, s'imbriquer entre eux.\\
+
+On retrouve cependant comme élément principal le socle Genesys, aussi appelé Customer Interaction Management (CIM), qui est la plate-forme principale pour la suite Genesys. Il fournis un environnement standard pour designer, déployer et manager en temps-réel des interactions entre clients et entreprises.
+Ces interactions sont routé vers les ressources compétentes, supportant des canaux d'interactions comme de la voix, emails, vidéos, chat ou encore SMS, le tout selon les configurations et stratégies de l'entreprise l'utilisant.
+
+Il offre aussi une plate-forme d'SDK qui expose les différents protocoles Genesys sous la forme d'une API, afin d'intégrer directement la suite à des infrastructures de centre de contact déjà existant ou d'applications personnalisées.\\
+
+Ainsi, Genesys est une solution hautement configurable, avec de nombreux outils différents pour paramétrer ses différents composants. Pour le routage on retrouve par exemple l'Interaction Routing Designer (IRD) qui implémente une interface nodales pour définir notamment le chemins d'une requête client.
+
+Mais l'un des composant principale de configuration est le Configuration Manager (CME). Ce dernier permet de paramétrer tout les objets et données dont un centre de contacte a besoin, généralement sous la forme de Dossiers/Sous-Dossier. On peu y attribuer des valeurs à différents objets (Par exemples une compétence spécifique à un opérateur, ou encore un métier à un site de centre de contact).
+
+\insererfigure{fig/fig3_CME.png}{7cm}{UI du configuration Manager}{CME}
+
+Tout ces outils de configurations permettent l'intégration de solutions de centre de contact, peu importe l'activité ou le scope de l'entreprise nécessitant ce centre.
+
+\newpage
+
+%---------------- Chapter 3 -------------------
+\section{Pacifica}
+
+Pacifica, filiale du Crédit Agricole, est une compagnie d'assurances au dommages. Annoncé 2018 comme le premier bancassureur dommages de France, avec pas moins de 12 millions de contrats sous sa tutelle, et 3.77 milliards de chiffres d'affaires.\\
+
+Il s'agit donc d'un relativement grand groupe de services d'assurances pour des particuliers. C'est pourquoi, afin de rester accessible et d'offrir une accessibilité à leurs services pour leurs clients, Pacifica nécessite l'implémentation de centres de contacts. C'est notamment le rôle de l'équipe que j'ai intégré pour ce stage. Homonymement appelé Pacifica, ce projet au sein du groupe Capgemini a pour but de concevoir et maintenir 2 solutions primordiales pour le bon fonctionnement des centres de contacts du groupe Pacifica.
+
+Travaillant pour leur solutions de centres de contact en produisant et maintenant deux applications, Pacifica est le nom donné au sein de Capgemini pour ce projet.\\
+
+Pour commencer, je vais expliquer les problématiques globales du projet, avant de décrire plus en détaille chacune des deux applications.
+
+
+\subsection{Le projet Pacifica}
+
+Le projet Pacifica développe et entretien deux applications hautement configurable: Le bandeau et Ocean.\\
+Ces deux projets répondent chacun à des problématiques distinctes pour un centre de contact, mais utilisent et partagent tout deux des services et entités communes. Le tout grâce au pro-logiciel Genesys qui leur permet à la fois de manipuler et stocker des données nécessaire pour le métier, mais aussi de configurer ces deux applications pour satisfaire leur architecture d'application hautement configurable.\\
+Cela leur permettant par exemple, de réarranger des modules, changer de formats de données, ou encore designer leurs propres pages, en fonction de divers paramètres comme le type d'utilisateur ou les types de sites. Le tout sans toucher une ligne de code et en temps réel (juste rafraîchir l'application), mais juste en passant au travers du configuration manager (CME).
+
+Contrairement au reste du cluster Centres de contact, le projet Pacifica ne s'occupe pas de la partie Genesys. En effet, la filiale possède déjà une équipe travaillant autour de la solution, configurant leurs propres environnements pour les différents sites et opérateurs sous leur responsabilité. Ainsi ils s'occupe de toute cette partie pouvant aller des règles de routages au management des équipes, tout en passant par les systèmes de monitoring, de configurations cisco, ou encore manipulations des médias.\\
+
+Ils possèdent donc de leurs cotés leur propre environnement Genesys, avec d'autres services et applications, qui nous sont inconnus. Mais les deux applications que nous fournissons doivent tout de même pouvoir s'y intégrer, en leur laissant aussi la possibilité d'en modifier le contenu (changer des formulaires, l'affichage des pages, cacher des fonctionnalités) selon leurs configuration.\\
+Pour cela le projet possède une panoplie de machines virtuelles sur lesquels sont installé différents services tout comme son propre environnement Genesys parallèle a la production, pour l'environnement de développement.
+
+De plus, on noteras que comme Genesys est utilisé en quelque sorte comme un back-end avec ses API pour en modifier le contenu, le projet Pacifica est majoritairement un projet de front-end.\\
+
+\subsection{L'application Bandeau}
+
+Le Bandeau Multimédia est la première application du projet Pacifica. Développé et soutenue par Capgemini depuis plus de 10 ans, le Bandeau est un client lourd destiné au opérateurs d'un centre de contact du groupe d'assurance. Il est installé sur chaque machines et est utilisé comme outil de travail principal des agents. Il leur permet notamment, en suivant la configuration Genesys, de recevoir et traiter des requêtes clients, que ce soit:\\
+
+\begin{itemize}
+\item Répondre a des appels téléphoniques qui leur ont été désigné par le système de routage.
+\item Accomplir des taches comme la création de nouveaux contrats d'assurances, ou la déclaration d'un sinistre.
+\item Archiver des documents envoyé par le clients en base de données, comme par exemple des attestation de résidences.
+\end{itemize}
+
+\subsubsection{Fonctionnalités}
+
+\begin{minipage}{0.65\textwidth}
+Au premier abords on pourrait s'attendre a un tout petit logiciel. Mais de part son architecture hautement configurable, il cache en réalité un très grand nombre de fonctionnalités selon les métiers de l'agent connecté.\\
+
+Le tout dans un espace restreint, comme le bandeau doit être ouvert continuellement sur le poste de l'agent, en restant au premier plan, mais ne pas occuper trop d'espace disponible sur les écrans de l'agent. 
+\end{minipage}
+\begin{minipage}{0.25\textwidth}
+\insererfigure{fig/fig4_BMfront.png}{4.5cm}{Le bandeau}{BMFront}\raggedright
+\end{minipage}
+\vspace{10mm} %5mm vertical space
+\noindent
+\\
+
+Ainsi, le bandeau est composé de cinq zones principales :
+
+\vspace{5mm} %5mm vertical space
+\begin{minipage}{0.25\textwidth}
+\insererfigure{fig/fig5_BMzones.png}{10cm}{Zones du bandeau}{BandeauZones}
+\end{minipage}
+\begin{minipage}{0.65\textwidth}
+
+\begin{itemize}
+\item -	Zone 1 : la zone du mode \\
+Cette zone permet de visualiser son mode de réception d’appel, de tâche et de mail en cours, et de le modifier.\\
+
+\item -	Zone 2 : la zone de l’état\\
+Cette zone permet de visualiser l’état global (voix et acTion) et son sous-état en cours, et de les modifier. L'agent peut notamment passer dans un état "Pas libre" pour par exemple une pause déjeuner ou une réunion.\\
+
+\item -	Zone 3 : une zone d’informations.\\
+Arrivée de messages d'information à destination de l'agent. Comme par exemple la notification d'une nouvelle réunion. \\
+
+\item -	Zone 4 : Onglets\\
+Cette zone contient les 2 onglets voix et acTion. 
+Les onglets permettent de visualiser, par un code couleur, l’état du bandeau pour chaque canal et d’accéder aux fonctions pour chaque média.
+\end{itemize}
+
+\end{minipage}
+\vspace{10mm} %5mm vertical space
+\noindent
+\\
+
+\vspace{5mm} %5mm vertical space
+\begin{minipage}{0.65\textwidth}
+Le premier onglet permet donc de recevoir comme son nom l'indiques des appels qui ont été routé vers l'agent par Genesys. \\
+
+Il s'agit d'un téléphone VoIP (Voice over IP) Cisco, et l'utilisateur peut à la fois répondre sur l'application ou sur son téléphone Cisco physique, appeler vers l'extérieur de l'écosystème du centre de contact, ainsi que consulter sa messagerie vocale et son journal d'appels.\\
+
+\end{minipage}
+\begin{minipage}{0.25\textwidth}
+\insererfigure{fig/fig6_BMphone.png}{5cm}{Onglet Téléphone}{BMFront}
+\end{minipage}
+\vspace{5mm} %5mm vertical space
+\noindent
+\\
+
+Le second onglet nommé "AcTion", qui permet de visualiser et traiter les tâches/e-mails distribués par le routage Genesys en fonction de différentes règles de gestion.\\
+
+L'agent peut y rédiger de nouveaux e-mails, créer de nouvelles taches, les réaffecter à un tiers. Mais il permet surtout à l'utilisateur d'accéder au bannettes qui sont les conteneurs principaux pour tous les médias manipulé par ce dernier. \\
+Il existe de nombreux types de bannettes configurable, pouvant aller de "ma bannette" pour les taches et émail de l'agent connecté, à la "Bannettes Commune", contenant des AcTion partagées pour tout le monde. Tout en passant par des bannettes filtrant un type d'AcTion comme la "Bannette Emails"\\
+
+
+\insererfigure{fig/fig7_BMetendu.png}{8cm}{Bandeau avec la bannette Emails}{BMEtendu}
+
+Dans le cas par exemple où l'utilisateur sélectionne un mail dans sa bannette, il peut directement:\\
+Répondre à l'émail, le suivre, l'imprimer, le transférer, le qualifier (associer des attributs comme l'origine, le site, ...), commenter, envoyer en Gestion Électronique de Documents (GED) afin d'archiver des pièces jointes pertinentes, identifier le contrat/client/sinistre, ou encore supprimer et clore cet émail.\\
+
+Dans le cas d'une tache, l'agent est offert le même type de fonctionnalités, cependant il ne lui est pas montré un corps de mail, mais plutôt un formulaire complet correspondant au informations nécessaires pour cette tache. Qui est configurable sur Genesys, grâce notamment au Configuration Manager (CME).
+
+\subsubsection{Points techniques}
+
+Le bandeau est développé en C\#, à l'aide du framework .NET 4.7 (Visual 2013 - MSBuild 12.0).
+Étant un client lourd sur windows, c'est le sous-système graphique Windows Presentation Foundation (WPF) qui est utilisé, avec la libraire Telerik fournissant pour WPF une panoplie de composants graphiques supplémentaires.\\
+
+Bien qu'ayant au fil des années subis des évolutions ici et là, dégradant l'intégrité de son patron de conception, c'est le Model-View-ViewModel (MVVM) qui est ici utilisé. La raison de ce choix est très simple: inventé par Microsoft, le patron MVVM est appliqué par WPF et Silverlight avant lui.\\
+
+Pour les autres outils on retrouve pour la gestion de version, un repository Subversion (SVN).\\
+Une plate-forme de test HP Application Lifecycle Management (HP AML) pour les tests fonctionnels, et le reporting de defects par le client.\\
+Et enfin, pour l'environnement de compilation, un Jenkins pour automatiser le build de livraison, tout comme lancer des builds journaliers pour s'assurer de l'intégrité du SVN après les commits de la journée.
+
+\subsection{L'application Ocean}
+
+Ocean est la deuxième application du projet Pacifica. Développé initialement par Niji, elle a été reprise et soutenue par Capgemini depuis 1 ans, suite a une refonte graphique. Ocean est un client léger destiné au administrateur d'un centre de contact du groupe d'assurance Pacifica. Il s'agit d'une Single Web Page Application accessible par un nombre limité de personnes, offrant des outils d'administration fonctionnelle et technique. Chaque métiers n'ont pas accès au même type d'outils, mais dans sa globalité, ces derniers permettent notamment de:\\
+
+\begin{itemize}
+\item Configuration des utilisateurs, pour modifier leurs skills, durée de travail, ou autre.
+\item Gestions des absences d'un opérateur.
+\item Configuration de l'écosystème pacifica, que ce soit routage Genesys, de repertoires pour le Bandeau,
+\end{itemize}
+
+\subsubsection{Fonctionnalités}
+
+\newpage
+
+%---------------- Chapter 4 -------------------
+\section{Cadre de stage}
+
+Je vais ici parler de l'environnement dans lequel j'ai pratiqué mon stage autour de la problématique de centre de contacts.
+Dans un premier temps, je parlerai de l'équipe, avec les rôles de chaque collaborateurs. Puis, je poursuivrai sur le projet, son but, son histoire, ainsi que quelques précisions techniques.
+
+\subsection{Environnement}
+
+Pour ce stage, j'ai donc intégré la "people unit" CSD (Custom Software Developpement). Cette dernière a pour directive principale la réalisation d'applications/solutions customisé pour ses clients.\\
+
+Au sein de ce groupe, je me suis retrouvé dans le "cluster CTI", un open space regroupant les experts centres de contacts de Capgemini Rennes. Il se constitue d'une douzaine de collaborateur avec des profils divers, s'occupant de la réalisation et paramétrages d'outils pour ses clients nécessitant la mise en place d'un centre de contact.\\
+
+Dans ce cluster j'ai ainsi rejoins une petite équipe de développeurs travaillant pour le crédit agricole nommé Pacifica. Cette équipe, tout comme le cluster en général a connu dans le passé un taux d'activité bien plus important, entraînant en partie une diminution drastique de ses effectifs ces derniers mois.
+
+\subsection{L'équipe}
+
+Constituée initiallement de 5 collaborateurs, l'équipe travaillant sur Pacifica est un petit groupe comparé à d'autres existants sur le site.
+On y retrouve:\\
+
+\begin{itemize}
+  \item Ophélie GAUTIER, Engagement Manager (EM) de grade C. Elle supervise et orchestre les actions de chacun sur le projet pacifica, ainsi que d'autres projets du cluster Centre de contact (CTI). Elle est ma tutrice de stage, et c'est assuré de mon intégration au projet ces 6 dernier mois.\\
+  
+  \item Matthias MUSSHE, initialement responsable technique du projet Pacifica, ingénieur logiciel de grade B avant de quitter le groupe Capgemini un mois après mon arrivée. Il m'a notamment aider à comprendre et configurer le pro-logiciel Genesys, pour le bon fonctionnement de mon environnement de développement.\\
+  
+  \item Mohammed HAMMAMI, Ingénieur Logiciel de grade B, architecte de l'application Ocean du projet Pacifica. A encadré mes actions sur Ocean, validant mon travail comme conforme a l'architecture de cette dernière. Quittera le projet mi-juillet, ne laissant plus qu'un ingénieur sur Pacifica.\\
+  
+  \item Bastien CLOAREC, Ingénieur Logiciel de grade B, devenus responsable technique du projet Pacifica, il travaille notamment le plus sur l'application Bandeau du projet Pacifica. Ainsi, il m'a fait découvrir l'architecture de cette application, et m'a orienter pour mes actions sur cette dernière.\\
+  
+\end{itemize}
+
+\subsection{Travail en équipe}
+Capgemini possède des règles pour le travail en équipe sur le site. Chaque collaborateurs a le statut de cadre, cela signifie qu'il n'y a pas de comptage d'heures, juste une plage allant de 36 à 39 heures. Il existe cependant tout de même une plage horaire où la présence de chacun est attendue (9h15 -17h30).\\
+
+Chaque matin, les équipes doivent se réunir pour un DSTUM (Daily STand Up Meeting) , une courte réunion à heure fixe (celle pour mon projet était à 9:15). Elle a pour but de se mettre à jour sur les informations générales du projet, des avancés ou retard que chaque collaborateur peuvent rencontrer, et mettre au point les actions faites le jour précédent et à venir. Cela permet d'avoir une vue globale de l'avancée du projet, ce qui semble primordial dans le cas d'un travail d'équipe.\\
+
+Capgemini promouvoie l'utilisation de la méthode de Lean pour le développement et l'industrialisation de ses projets. Cependant, le choix de ce type de méthodes dépend du sujet et du client.\\ 
+Dans notre cas, les responsables du projet pacifica au Crédit Agricole, désirait s'impliquer un minimum dans la vie de développement des évolutions qu'ils commandent. Ainsi, les méthodes agiles couramment à la mode de nos jours n'était donc pas envisageable.\\
+
+Ainsi, c'est le développement en V qui a été sélectionné, sur les différentes d'évolutions commandées par le client.\\
+
+
+Toutes évolutions commence avec une Expression de Besoin (EB) rédigée par le client. Suivi d'une proposition commerciale (PROPAL), notre réponse aprés études des besoins et estimation des charges de travail. Si cette évaluations du chiffrage convient au client, le projet démarre comme informé ci dessous.
+
+\insererfigure{fig/fig2_PhasesProjet.png}{5cm}{Cycle du projet pour une évolution.}{Cycle de vie}
+
+Malgré le fait qu'il s'agisse d'un développement en V ou normalement le client est exclus du processus de développement. Dans le cas de ce projet, des réunions hebdomadaire sont organiser, afin faire le point sur les problèmes globaux, les timelines, ainsi que l'assurance des actions de chaque acteurs du projet..
+
+\newpage
+
+%---------------- Chapter 5 -------------------
+\section{Travaux effectués}
+
+Ce troisième chapitre traite de mon activité lors du stage. Dans un premier temps, je vais parler du calendrier de mes actions, pour ensuite rentrer dans les détails de chacune de mes activités jugées plus importantes.
+
+\subsection{Calendrier}
+
+Mon stage s'est déroulé du 28/05/2018 au 31/08/2018:\\
+
+\insererfigure{fig/fig3_Calendar.png}{4cm}{Calendrier d'actions lors de mon stage.}{Calendar}
+
+Il a consisté en plusieurs petites actions tout le long de ces 3 mois. Je vais rester relativement global dans ce calendrier car il s'agit de la trame globale de mon stage, sachant que je suis revenu sur des travaux précédents après être passé à un sujet différent.
+
+\subsection{Tâches}
+
+Par ordre chronologique, je vais maintenant décrire mes tâches accomplies durant ce stage. 
+
+\subsubsection{Découvertes}
+
+A mon arrivée sur le projet, je devais d'abord m'installer avec le PC qui m'a été fourni. Il s'agissait d'installer les logiciels utilisés comme par exemple TortoiseSVN, ainsi que Qt Creator.\\
+La première compilation m'a alors laissé le temps de parcourir la documentation Qt et C++, n'ayant jamais touché à ces technologies. Cette période a aussi été l'occasion pour moi de découvrir le projet Cadenv au travers de différentes documentations qui étaient disponibles.\\
+
+Ces premières semaines m'ont permis d'appréhender les différents acteurs chez Capgemini, rencontrer le CE, les RH et RM, et bien évidemment les membres de l'équipe. De plus, une présentation (OnBoarding) sur la journée du 5 Juin 2018 a été organisée par le groupe pour présenter l'entreprise aux nouveaux stagiaires.
+
+\subsubsection{Correction trigger}
+
+Très rapidement, une tâche m'a été attitré: une correction sur un souci relevé lors d'un précédent point de visibilité.\\
+C'était pour moi l'occasion, tout en continuant d'apprendre le langage, framework et IDE, de tester mes nouvelles connaissances.\\
+
+Le Module Réverbéré de l'application permet de déterminer la distance d'un corps étranger grâce à la mesure d'écho d'un sonar. L'application devait fournir un système de trigger automatique lorsque le sonar avait fini d'émettre son onde. Cela signifie qu'on écoute un balayage lorsque l'émetteur a fini d'émettre (front descendant).\\
+
+On a alors deux entrées, celle du trigger et celle du bruit. Il s'agit de deux informations enregistrées analogiquement, elles sont donc sujettes aux interférences. Les courbes étant traitées point par point en temps réel, ces interférences nous empêche de faire un choix sur un unique point. Avec uniquement ce dernier, il est possible que le bruit soit interprété comme un front montant ou descendant, entraînant un nouveau balayage non désiré.\\
+
+Voici un schéma du trigger pour le balayage:
+
+
+\insererfigure{fig/fig4_GraphTrigger.png}{6cm}{Enchaînement du balayage après le trigger.}{GraphTrigger}
+
+Ma correction devait valider l'enregistrement d'un nouveau front au niveau du trigger, lorsque n points successifs de l'acquisition sont du même état. (Haut/Bas)\\
+Par exemple, si n point successifs sont au-dessus du seuil du trigger (seuil d'activation) et étant en état bas, on enregistre alors un front montant.\\
+
+J'ai aussi ajouté la possibilité de relancer un balayage quand un front descendant venait d'être rencontré pendant le précédent. Cela simplifie la vie de l'utilisateur dans le cas où il fournirait un balayage avec une gamme trop grande.
+
+\subsubsection{Amélioration simulateur}
+
+Une fois la correction proposée, il se posait le problème de tester son bon fonctionnement. \\
+
+Avant mon arrivée avait été développée une application permettant, au travers de boîtiers Nudaqs, des fichiers CSV et de véritable valeurs de sonars, de simuler l'acquisition en temps réel sur Cadenv.\\
+Le soucis étant que ces fichiers CSV sont incompréhensibles pour un humain (énormément de valeurs et parfois inversées). Il était donc impossible d'observer les deux courbes et s'assurer qu'un balayage était lancé au bon moment.
+
+\insererfigure{fig/fig5_SimuOG.png}{6cm}{Simulateur d'origine.}{SimuOG}
+
+C'est alors que vient la proposition de développer une amélioration du simulateur, permettant d'observer les valeurs pré-enregistrées du CSV. On verrait ainsi le graphe du trigger et de la réverbération, offrant la possibilité de comparer les deux.
+
+
+\insererfigure{fig/fig6_SimuUp.png}{7cm}{Simulateur mis à jour.}{SimuUp}
+
+On peut voir différentes modifications, comme par exemple l'ajout de paramètres dans la fenêtre principale (le choix des séparateurs dans le fichier CSV, ou encore l'existence de header). On a aussi la possibilité de choisir quelles courbes on veut voir, changeant la second fenêtre lorsqu'on lance la simulation.\\
+Enfin le graphe Qt est manipulable à l'aide des boutons sur la droite, afin de pouvoir comparer les deux courbes.\\
+
+Cette partie a pour moi été l'occasion de découvrir le moyen d'ouvrir des fenêtres, d'ajouter des widgets, et de les faire interagir entre eux avec Qt.
+
+\subsubsection{Documentation}
+
+Dans cette partie, je me suis plongé dans une ancienne documentation obsolète rédigée au début du projet en 2015. Il s'agissait d'une documentation de conception, contenant les choix et but de l'architecture de l'application. \\
+
+Elle m'a permis d'appréhender le projet dans son intégralité, comprendre le pattern design MVC, ainsi que, tout simplement, les rôles de chaque modules pour l'application.
+
+\subsubsection{Nouveau simulateur}
+
+Une nouvelle branche du projet a été entamée à mon arrivé. Nommée en interne Cadenv FTI, il s'agit d'un portage pour les futurs bâtiments de la Marine Nationale, les Frégates de Taille Intermédiaires (FTI). Ces navires ne dépendront plus de systèmes analogiques, et toutes les informations entre systèmes seront échangées au travers d'une couche réseau sécurisée du bateau, sous forme de trames.\\
+
+Il n'est donc plus question de boîtiers branchés au pc, mais plutôt la récupération des trames via sockets UDP ou TCP selon les messages. Les simulateurs hors FTI sont donc obsolètes et l'une de mes missions a été de créer en partant de rien un nouveau simulateur Réverbéré Bruit FTI. Le simulateur jouerait le rôle de serveur avec l'utilisateur qui décide quels messages envoyer. \\
+
+Les messages peuvent être générés, pour ensuite être sauvegarder dans un .json où chaque paramètres sont modifiables.\\
+
+Cela m'a permis de me lancer en partant de rien dans une application Qt, ainsi que de toucher à un large panel des libraires fournies par ce framework.
+
+\subsubsection{Tests}
+
+Cadenv est une application qui, comme tous programmes, demande des tests. Ici un des outils utilisé est HP ALM pour les tests de non régression et tests fonctionnels. Des tests unitaires existent à l'aide de Qt Tests, mais j'ai eu l'occasion de tester HP ALM dans le cadre de tests de non régression afin de compléter un nouveau cycle de vie de l'application.
+
+\newpage
+
+%-----------------BILAN -----------------------------
+\section{Bilan}
+
+Le but de mon stage était de découvrir à la fois le monde de l'entreprise, ainsi que de nouvelles technologies, et je dois dire que je ne suis pas déçu, à la fois professionnellement que personnellement!\\
+
+Professionnellement, j'ai pu apprendre des choses qui me seront très certainement utiles à l'avenir. Qt reste aujourd'hui un framework populaire et puissant qui a fait ses preuves, sans parler du C++ en général. Mes travaux ont eu la possibilité d'être critiqués par des professionnels, me permettant d'appréhender les défauts dans mes choix d'implémentation avant de les corriger. \\
+
+Personnellement, l'expérience a été enrichissante, car j'ai pu partager avec des personnes du milieu, essayer d'améliorer ma capacité de partager de mes visions sur un projet. Elle m'a aussi permis d'élucider de nombreuses questions que j'avais sur le monde de l'entreprise, me montrant à quoi je devrais m'attendre une fois mes études terminées.
+
+\subsection*{Conclusion}
+Pour résumer, arrivant au terme de mon stage, le bilan me parait très satisfaisant. \\
+Apprendre de nouvelles technologies était pour moi un point central de ce stage, et j'ai eu le droit à bien plus que ça. J'ai fait mon maximum pour répondre aux demandes de l'équipe, et je ressens une certaine satisfaction quand mes travaux sont utilisés. \\
+J'en ressors avec des réponses et des connaissances pour mon avenir.
+
+
+
+
+
+
+
+
+\end{document}
