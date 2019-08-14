@@ -56,9 +56,9 @@
 	\vspace{1cm}%Espace de 1cm
     \rule{\linewidth}{0.2 mm} \\[0.4 cm]
 	{\huge\bfseries \titre \par} \
-    \rule{\linewidth}{0.2 mm} \\[1.5 cm]
-	\vspace{1cm}%Espace de 3cm
-    
+    \rule{\linewidth}{0.2 mm} \\[0.5 cm]
+    7 Rue Claude Chappe, Rennes Atalante Champs Blancs, CS 67746, 35510 Cesson-Sévigné\\
+	\vspace{1.5cm}%Espace de 3cm
 	\begin{minipage}{0.5\textwidth} %Minipage pour faire deux colonnes
 		\begin{flushleft} \large %Envoyer à gauche
 		\emph{\textbf{Élève :}}\\ %Pour le titre au dessus des noms à gauche
