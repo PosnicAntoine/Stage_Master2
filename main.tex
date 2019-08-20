@@ -78,7 +78,7 @@ Estimée à plus de 16 milliards, Capgemini compte 200 000 employés et possède
 
 Capgemini étant une ESN, elle s'appuie sur trois principaux pôles de métiers: le domaine du conseil, des services informatiques et de l'infogérance.
 \begin{itemize}
-  \item \textbf{Conseil ou Consulting Services (CS):} Consiste à diriger ses clients dans les transformations que ces derniers veulent accomplir, que ce soit pour améliorer leur croissance ou leur compétitivité. On parle majoritairement ici, par exemple, de transformation digitale.
+  \item \textbf{Conseil ou Consulting Services (CS):} Consiste à diriger ses clients dans les transformations que ces derniers veulent accomplir, que ce soit pour améliorer leur croissance ou leur compétitivité. On parle par exemple ici de transformation digitale.
   
   \item \textbf{Services Informatiques ou Technology Services (TS):} Ce pôle conçoit et développe des systèmes demandés par les clients.
   
@@ -122,7 +122,7 @@ Pour les congés, un salarié commence à 25 jours par an en ajoutant une nouvel
 
 Un point important est aussi mis sur les formations. Gros plus pour un développeur, puisqu'il doit pouvoir s'adapter et se mettre à jour dans cet environnement grandissant qu'est l'informatique, restant au goût du jour tout le long de sa carrière. De plus, les certifications qui en découlent sont reconnues dans le monde du travail par le poids que Capgemini a sur le marché.\\
 
-De plus cette ESN conseille fortement l'utilisation des communautés, qui permettent notamment l'échange d'informations entre ses différents actifs d'un corps de métier. Par exemple la communauté d'ingénieurs "software engineer" propose des présentations techniques de divers technologies/frameworks.
+De plus cette ESN conseille fortement l'utilisation des communautés, qui permettent notamment l'échange d'informations entre ses différents acteurs d'un corps de métier. Par exemple la communauté d'ingénieurs "software engineer" propose des présentations techniques de divers technologies/frameworks.
 
 Les formations et communautés permettent au collaborateurs de ne pas rester cloisonné dans un seul type d'activité, offrant la possibilité à terme d'apprendre et changer de corps de métier.\\
 
@@ -165,7 +165,7 @@ C'est ce que nous allons traiter dans cette seconde partie.
 Le terme centre de contact défini une activité industrialisée du contact client. Il s'agit alors d'un secteur à part entière d'une entreprise, avec ses propres systèmes et techniques.
 D'un point de vue structurel, les centres de contact à l'échelle industrielle reste généralement les mêmes.\\
 
-Ils se comportent de divers centres de services clients, où sont employé des opérateurs formés à répondre à certains types de problématiques dont les clients ont besoin. Ainsi, chaque demande doit être analysée pour être dirigée vers un opérateur compétent, et pour cela, il existe diverses solutions logiciel\\
+Ils se composent de divers centres de services clients, où sont employés des opérateurs formés à répondre à certains types de problématiques dont les clients ont besoin. Ainsi, chaque demande doit être analysée pour être dirigée vers un opérateur compétent, et pour cela, il existe diverses solutions logiciel\\
 
 Chacune possédant leurs propres spécifications, ces solutions cherchent à répondre aux différents besoins métiers de leur clients.
 On retrouve par exemple des techniques pour constamment améliorer la satisfaction client, ou un système de monitoring afin d'évaluer les performances du service. On peut aussi retrouver une planification horaire pour concilier les périodes de pointes et emploi du temps des opérateurs.\\
@@ -195,6 +195,12 @@ Mais l'un des composants principaux de configuration est le Configuration Manage
 
 Tout ces outils de configurations permettent l'intégration de solutions de centre de contact, peu importe l'activité ou le scope de l'entreprise nécessitant ce centre.
 
+\subsection{Conclusion}
+
+Les centres de contacts jouent un rôle primordiale dans l'activité d'une entreprise au service de particuliers. Ils permettent à la fois d'entretenir une bonne relation client avec l'entreprise, et de fournir des services qui sont nécessaire pour son bon fonctionnement.\\
+Évidemment les services et le fonctionnement d'un centre de contact varie énormément selon l'activité de la société. Selon le type d'activité ou encore la taille de cette dernière, pratiquement chacune nécessite sa propre solution selon ses problématiques.\\
+Pour cela, des solutions comme Genesys permettent d'offrir des solution industrielles hautement configurable, autour desquels une entreprise peut instaurer son propre systéme de centre de contact.
+
 \newpage
 
 %---------------- Chapter 3 -------------------
@@ -213,12 +219,12 @@ Pour commencer, je vais expliquer les problématiques globales du projet, avant 
 
 Le projet Pacifica développe et entretien deux applications hautement configurables: Le bandeau et Ocean.\\
 Ces deux projets répondent chacun à des problématiques distinctes pour un centre de contact, mais utilisent et partagent toutes deux des services et entités communes. Le tout grâce au pro-logiciel Genesys qui leur permet à la fois de manipuler et stocker des données nécessaires pour le métier, mais aussi de configurer ces deux applications pour satisfaire leur architecture d'application hautement configurable.\\
-Cela leur permet par exemple de réarranger des modules, changer de formats de données, ou encore designer leurs propres pages en fonction de divers paramètres comme le type d'utilisateur ou les types de sites. Le tout est possible sans toucher une ligne de code et en temps réel (juste rafraîchir l'application), mais juste en passant au travers du configuration manager (CME).
+Cela leur permet par exemple de réarranger des modules, changer de formats de données, ou encore designer leurs propres pages en fonction de divers paramètres comme le type d'utilisateur ou les types de sites. Le tout est possible sans toucher une ligne de code et en temps réel (juste rafraîchir l'application) au travers du configuration manager (CME).
 
 Contrairement au reste du cluster Centres de contact, le projet Pacifica ne s'occupe pas de la partie Genesys. En effet, la filiale possède déjà une équipe travaillant autour de la solution, configurant leurs propres environnements pour les différents sites et opérateurs sous leur responsabilité. Ainsi ils s'occupent de toute cette partie pouvant aller des règles de routages au management des équipes, tout en passant par les systèmes de monitoring, de configurations cisco, ou encore de manipulations des médias.\\
 
 Ils possèdent donc de leurs cotés leur propre environnement Genesys, avec d'autres services et applications, qui nous sont inconnus. Mais les deux applications que nous fournissons doivent tout de même pouvoir s'y intégrer, en leur laissant aussi la possibilité d'en modifier le contenu (changer des formulaires, l'affichage des pages, cacher des fonctionnalités) selon leurs configuration.\\
-Pour cela, le projet possède une panoplie de machines virtuelles sur lesquelles sont installés différents services tout comme son propre environnement Genesys parallèle à la production, pour l'environnement de développement.
+Pour cela, le projet possède, pour l'environnement de développement, une panoplie de machines virtuelles sur lesquelles sont installés les différents services nécessaires, ainsi que son propre environnement Genesys parallèle à la production.
 
 De plus, on notera que comme Genesys est utilisé en quelque sorte comme un back-end avec ses API pour en modifier le contenu, le projet Pacifica est majoritairement un projet de front-end.\\
 
@@ -319,7 +325,7 @@ Ocean est la deuxième application du projet Pacifica. Développée initialement
 \begin{itemize}
 \item Configurer des utilisateurs, pour modifier leurs skills, durée de travail, ou autre.
 \item Gérer des absences d'un opérateur.
-\item Configurer l'écosystème Pacifica, que ce soit routage Genesys, de répertoires pour le Bandeau.
+\item Configurer l'écosystème Pacifica, que ce soit routage Genesys, répertoires pour le Bandeau, ou autres.
 \item Consulter l'historique des modifications de paramètres.
 \item Programmer des modifications.
 \item Envoyer des Broadcasts sur les bandeaux.
@@ -328,13 +334,13 @@ Ocean est la deuxième application du projet Pacifica. Développée initialement
 
 \subsubsection{Fonctionnalités}
 
-L'application Ocean est principalement un outil centralisant et simplifiant l'administration d'objets Genesys. Tout comme le bandeau, Ocean possède une architecture hautement configurable, avec des fonctionnalités paramétrables, ou encore accessibles selon les métiers de l’agent connecté. Ainsi, le client peut modifier les labels de l'application, ranger chaque fonctionnalité dans différents groupes et les cacher en fonctions des accréditations de l'utilisateur connecté.
+L'application Ocean est principalement un outil centralisant et simplifiant l'administration d'objets Genesys. Tout comme le bandeau, Ocean possède une architecture hautement configurable, avec des fonctionnalités paramétrables, ou encore accessibles selon les métiers de l’agent connecté. Ainsi, le client peut modifier les labels de l'application, ranger chaque fonctionnalité dans différents groupes et les cacher en fonction des accréditations de l'utilisateur connecté.
 
 \insererfigure{fig/fig8_OceanMain.png}{7cm}{Page d'accueil Ocean}{OceanMain}
 
 \begin{minipage}{0.55\textwidth}
 
-La navigation se fait au travers d'un menu déroulant configurable. Ce dernier permet d'accéder à différentes catégories, elles-mêmes supportant plusieurs fonctions. Représentées sous forme d'onglets, ces fonctions sont les éléments constituant la fonctionnalité d'Ocean, et ce sont leurs accès qui sont vérifiés en fonction des compétences de l'utilisateur. Il est donc possible que dans une catégorie regroupant six fonctionnalités, un utilisateur ne soit accrédité pour en observer que 3.
+La navigation se fait au travers d'un menu déroulant configurable. Ce dernier permet d'accéder à différentes catégories, elles-mêmes supportant plusieurs fonctions. Représentées sous forme d'onglets, ces fonctions sont les éléments constituant la fonctionnalité d'Ocean, et ce sont leurs accès qui sont vérifiés en fonction des compétences de l'utilisateur. Il est donc possible que dans une catégorie regroupant six fonctionnalités, un utilisateur ne soit accrédité pour en observer que trois.
 
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
@@ -346,7 +352,7 @@ La navigation se fait au travers d'un menu déroulant configurable. Ce dernier p
 
 Chaque onglet contient donc une fonction indépendante de l'application, tenant sur une seule page, et qui doit correspondre à des exigences générales de l'outil. Nous pouvons citer les exemples suivants: gérer les accès concurrents à l'application et ses données critiques, paramétrer des messages et libellés de l'application, respecter les principes ergonomiques mis en place à l'initialisation du projet.\\
 
-A ce jour, l'application Ocean comporte près de vingt-cinq fonctions techniques et/ou fonctionnelles. On peut y retrouver par exemple rangé par catégories:
+A ce jour, l'application Ocean comporte près de vingt-cinq fonctions techniques et/ou fonctionnelles. On peut y retrouver par exemple, rangées par catégories:
 
 \vspace{5mm} %5mm vertical space
 \begin{itemize}
@@ -406,19 +412,19 @@ A ce jour, l'application Ocean comporte près de vingt-cinq fonctions techniques
 
 \subsubsection{Points techniques}
 
-Ocean est développé en C\#, à l'aide du framework .NET 4.7 (Visual 2015 - MSBuild 14.0). Ce choix provenant principalement du fait que l'écosystème des solutions chez le client tourne autour des services windows, et qu'une homogénéité était désiré (Webservices hébergé sur windows IIS, authentifications au travers des sessions windows, ...).\\
-Étant un client léger web, c'est le framework ASP.NET MVC (basé sur ASP.NET) qui est utilisé, avec la libraire Telerik fournissant une panoplie de composants graphiques supplémentaires.\\
+Ocean est développée en C\#, à l'aide du framework .NET 4.7 (Visual 2015 - MSBuild 14.0). Ce choix provenant principalement du fait que l'écosystème des solutions chez le client tourne autour des services windows, et qu'une homogénéité était désirée (Webservices hébergé sur windows IIS, authentifications au travers des sessions windows, ...).\\
+Étant un client léger web, c'est le framework ASP.NET MVC (basé sur ASP.NET) qui est utilisé, avec la librairie Telerik fournissant une panoplie de composants graphiques supplémentaires.\\
 
-En plus d'utiliser les API de l'environnement Genesys pour manipuler les paramètres ou objets de la solution, Ocean utilise d'autres services. Il implémente par exemple l'API AXL pour l'interfaçage cisco, les services de l'environnement windows pour les traitements en différé, ou encore directement un service du Bandeau pour l'envoie de broadcast au agents d'un site.\\
+En plus d'utiliser les API de l'environnement Genesys pour manipuler les paramètres ou objets de la solution, Ocean utilise d'autres services. Il implémente par exemple l'API AXL pour l'interfaçage cisco, les services de l'environnement windows pour les traitements en différé, ou encore directement un service du Bandeau pour l'envoie de broadcast aux agents d'un site.\\
 
-Le projet initialement développé par Niji (une autre ESN concurrente) sous le framework Silverlight aujourd'hui obsolète. Capgemini à été contracté pour créer une refonte globale de l'application. Le projet a donc repris et fait évolué la logique des services développé par Niji, ainsi que recréer intégralement la partie client de l'application.\\
-Pour cela un nouveau patron de conception est utilisé: le Model-View-Controller (MVC). De plus plusieurs couches applicatives ont été désigné dont les plus importante sont:\\
+Le projet a initialement été développé par Niji (une autre ESN concurrente) sous le framework Silverlight aujourd'hui obsolète. Capgemini a été contractée pour créer une refonte globale de l'application, reprenant ainsi la logique des services développés par Niji, et recréer intégralement la partie client de l'application.\\
+Pour cela, un nouveau patron de conception est utilisé: le Model-View-Controller (MVC). De plus, plusieurs couches applicatives ont été désignées dont les plus importantes sont:\\
 
 \begin{minipage}{0.35\textwidth}
 \insererfigure{fig/fig11_OceanModuleArchi.png}{3cm}{Modules}{OceanModuleArchi}
 \end{minipage}
 \begin{minipage}{0.55\textwidth}
-La couche client comportant les modules où sont rédigé les fonctions de l'application, regroupées dans des projets C\# qui sont rangé similarités. Par exemple les fonctionnalités "Configuration Utilisateurs", "Visualisation Utilisateurs" et "Absences" sont tous regroupé sous un même projet "Utilisateur".
+La couche client comportant les modules où sont rédigées les fonctions de l'application, regroupées dans des projets C\# qui sont rangés par similarités. Par exemple, les fonctionnalités "Configuration Utilisateurs", "Visualisation Utilisateurs" et "Absences" sont toutes regroupées sous un même projet "Utilisateur".
 \end{minipage}
 \vspace{5mm} %5mm vertical space
 
@@ -426,15 +432,26 @@ La couche client comportant les modules où sont rédigé les fonctions de l'app
 \insererfigure{fig/fig12_OceanWebservicesArchi.png}{3cm}{WebServices}{OceanWebservicesArchi}
 \end{minipage}
 \begin{minipage}{0.55\textwidth}
-La couche WebService comportant a la fois la logique anciennement développé et la nouvelle, découpé dans 4 étapes. La partie "Service" qui joue le rôle d'API, représentant la façade des divers appels possibles. "Rules" où est rédigé la logique d'un appel au web service. Et enfin les couches "DAL" et "BO" appliquant les modifications au travers d'appels simples vers les API externes.
+La couche WebService comporte à la fois la logique anciennement développée et la nouvelle, découpée dans 4 étapes. La partie "Service" qui joue le rôle d'API, représentant la façade des divers appels possibles. "Rules" où est rédigé la logique d'un appel au web service. Et enfin les couches "DAL" et "BO" appliquant les modifications au travers d'appels simples vers les API externes.
 \end{minipage}
 \vspace{5mm} %5mm vertical space
 \\
 
-Pour les autres outils on retrouve pour la gestion de version, un repository Subversion (SVN).\\
-Une plate-forme de test HP Application Lifecycle Management (HP AML) pour les tests fonctionnels, et le reporting de defects par le client.\\
-Et enfin, pour l'environnement de compilation, un Jenkins pour automatiser le build de livraison, tout comme lancer des builds journaliers pour s'assurer de l'intégrité du SVN après les commits de la journée.
+Pour les autres outils, on retrouve un repository Subversion (SVN) pour la gestion de version.\\
+Une plateforme de test HP Application Lifecycle Management (HP AML) pour les tests fonctionnels, et le reporting de defects par le client.\\
+Et enfin, pour l'environnement de compilation, un Jenkins permettant d'automatiser le build de livraison, tout comme de lancer des builds journaliers pour s'assurer de l'intégrité du SVN après les commits de la journée.
 
+\subsection{Conclusion}
+
+Le projet Pacifica chez Capgemini a pour but d'entretenir et faire évoluer deux applications pour la filiale d'assurance aux dommages du Crédit Agricole. Elles doivent s'intégrer et utiliser l'écosystème Genesys installé  afin de répondre aux besoins de leurs centres de contact.\\
+
+Développé en C\# avec le framework .NET, ces deux applications peuvent être visualisées de la façon suivante:
+
+\insererfigure{fig/fig13_PacificaApplications.png}{7cm}{Applications du projet Pacifica}{PacificaApplications}
+
+On retrouve le bandeau, client lourd installé sur la machine de tout les opérateurs, leur fournissant les requêtes clients routées par la solution Genesys qu'ils doivent traiter. Ces dernières peuvent prendre la forme d'appels entrants ou encore d'e-mails.\\
+
+La seconde application, nommée Ocean est un client léger web sur lequel les administrateurs d'un centre de contact peuvent manipuler une partie de paramétrage Genesys de façon sécurisée et simplifiée.
 
 \newpage
 
@@ -446,75 +463,121 @@ Dans un premier temps, je parlerai de l'équipe, avec les rôles de chaque colla
 
 \subsection{Environnement}
 
-Pour ce stage, j'ai donc intégré la "people unit" CSD (Custom Software Developpement). Cette dernière a pour directive principale la réalisation d'applications/solutions customisé pour ses clients.\\
+Pour ce stage, j'ai donc intégré la "people unit" CSD (Custom Software Developpement). Cette dernière a pour directive principale la réalisation d'applications/solutions customisées pour ses clients.\\
 
-Au sein de ce groupe, je me suis retrouvé dans le "cluster CTI", un open space regroupant les experts centres de contacts de Capgemini Rennes. Il se constitue d'une douzaine de collaborateur avec des profils divers, s'occupant de la réalisation et paramétrages d'outils pour ses clients nécessitant la mise en place d'un centre de contact.\\
+Au sein de ce groupe, je me suis retrouvé dans le "cluster CTI", un open space regroupant les experts centres de contact de Capgemini Rennes. Il se constitue d'une douzaine de collaborateurs avec des profils divers, s'occupant de la réalisation et du paramétrage d'outils pour ses clients nécessitant la mise en place d'un centre de contact.\\
 
-Dans ce cluster j'ai ainsi rejoins une petite équipe de développeurs travaillant pour le crédit agricole nommé Pacifica. Cette équipe, tout comme le cluster en général a connu dans le passé un taux d'activité bien plus important, entraînant en partie une diminution drastique de ses effectifs ces derniers mois.
+Dans ce cluster j'ai ainsi rejoins une petite équipe de développeurs travaillant pour le crédit agricole nommée Pacifica. Cette équipe, tout comme le cluster en général, a connu dans le passé un taux d'activité bien plus important, entraînant en partie une diminution drastique de ses effectifs ces derniers mois.
 
 \subsection{L'équipe}
 
-Constituée initialement de 5 collaborateurs, l'équipe travaillant sur Pacifica est un petit groupe comparé à d'autres existants sur le site.
+Constituée initialement de cinq collaborateurs, l'équipe travaillant sur Pacifica est un petit groupe comparé à d'autres existants sur le site.
 On y retrouve:\\
 
 \begin{itemize}
-  \item Ophélie GAUTIER, Engagement Manager (EM) de grade C. Elle supervise et orchestre les actions de chacun sur le projet pacifica, ainsi que d'autres projets du cluster Centre de contact (CTI). Elle est ma tutrice de stage, et c'est assuré de mon intégration au projet ces 6 dernier mois.\\
+  \item Ophélie GAUTIER, Engagement Manager (EM) de grade C. Elle supervise et orchestre les actions de chacun sur le projet Pacifica, ainsi que d'autres projets du cluster Centre de contact (CTI). Elle est ma tutrice de stage, et elle s'est assurée de mon intégration au projet ces six dernier mois.\\
   
   \item Matthias MUSSHE, initialement responsable technique du projet Pacifica, ingénieur logiciel de grade B avant de quitter le groupe Capgemini un mois après mon arrivée. Il m'a notamment aider à comprendre et configurer le pro-logiciel Genesys, pour le bon fonctionnement de mon environnement de développement.\\
   
-  \item Mohammed HAMMAMI, Ingénieur Logiciel de grade B, architecte de l'application Ocean du projet Pacifica. A encadré mes actions sur Ocean, validant mon travail comme conforme a l'architecture de cette dernière. Quittera le projet mi-juillet, ne laissant plus qu'un ingénieur sur Pacifica.\\
+  \item Mohammed HAMMAMI, Ingénieur Logiciel de grade B, architecte de l'application Ocean du projet Pacifica. A encadré mes actions sur Ocean, validant mon travail comme conforme à l'architecture de cette dernière. Quittera le projet mi-juillet, ne laissant plus qu'un ingénieur sur Pacifica.\\
   
-  \item Bastien CLOAREC, Ingénieur Logiciel de grade B, devenus responsable technique du projet Pacifica, il travaille notamment le plus sur l'application Bandeau du projet Pacifica. Ainsi, il m'a fait découvrir l'architecture de cette application, et m'a orienter pour mes actions sur cette dernière.\\
+  \item Bastien CLOAREC, Ingénieur Logiciel de grade B, devenu responsable technique du projet Pacifica, il travaille notamment plus sur l'application Bandeau du projet Pacifica. Ainsi, il m'a fait découvrir l'architecture de cette application, et m'a orienté pour mes actions sur cette dernière.\\
   
 \end{itemize}
 
 \subsection{Travail en équipe}
-Capgemini possède des règles pour le travail en équipe sur le site. Chaque collaborateurs a le statut de cadre, cela signifie qu'il n'y a pas de comptage d'heures, juste une plage allant de 36 à 39 heures. Il existe cependant tout de même une plage horaire où la présence de chacun est attendue (9h15 -17h30).\\
+Capgemini possède des règles pour le travail en équipe sur le site. Chaque collaborateur a le statut de cadre, cela signifie qu'il n'y a pas de comptage d'heures, juste une plage allant de 36 à 39 heures. Il existe cependant tout de même une plage horaire où la présence de chacun est attendue (9h15 -17h30).\\
 
-Chaque matin, les équipes doivent se réunir pour un DSTUM (Daily STand Up Meeting) , une courte réunion à heure fixe (celle pour mon projet était à 9:15). Elle a pour but de se mettre à jour sur les informations générales du projet, des avancés ou retard que chaque collaborateur peuvent rencontrer, et mettre au point les actions faites le jour précédent et à venir. Cela permet d'avoir une vue globale de l'avancée du projet, ce qui semble primordial dans le cas d'un travail d'équipe.\\
+Chaque matin, les équipes doivent se réunir pour un DSTUM (Daily STand Up Meeting) , une courte réunion à heure fixe (celle pour mon projet était à 9:15). Elle a pour but de se mettre à jour sur les informations générales du projet, des avancées ou retards que chaque collaborateur peuvent rencontrer, et mettre au point les actions faites le jour précédent et à venir. Cela permet d'avoir une vue globale de l'avancée du projet, ce qui semble primordial dans le cas d'un travail d'équipe.\\
 
-Capgemini promouvoie l'utilisation de la méthode de Lean pour le développement et l'industrialisation de ses projets. Cependant, le choix de ce type de méthodes dépend du sujet et du client.\\ 
-Dans notre cas, les responsables du projet pacifica au Crédit Agricole, désirait s'impliquer un minimum dans la vie de développement des évolutions qu'ils commandent. Ainsi, les méthodes agiles couramment à la mode de nos jours n'était donc pas envisageable.\\
+Capgemini promouvoit l'utilisation de la méthode de Lean pour le développement et l'industrialisation de ses projets. Cependant, le choix de ce type de méthodes dépend du sujet et du client.\\ 
+Dans notre cas, les responsables du projet pacifica au Crédit Agricole désiraient s'impliquer un minimum dans la vie de développement des évolutions qu'ils commandent. Ainsi, les méthodes agiles à la mode de nos jours n'ont pas été envisagées.\\
 
 Ainsi, c'est le développement en V qui a été sélectionné, sur les différentes d'évolutions commandées par le client.\\
 
 
-Toutes évolutions commence avec une Expression de Besoin (EB) rédigée par le client. Suivi d'une proposition commerciale (PROPAL), notre réponse aprés études des besoins et estimation des charges de travail. Si cette évaluations du chiffrage convient au client, le projet démarre comme informé ci dessous.
+Toute évolution commence avec une Expression de Besoin (EB) rédigée par le client, suivie d'une proposition commerciale (PROPAL). Notre réponse est donnée après étude des besoins et estimation des charges de travail. Si cette évaluation du chiffrage convient au client, le projet démarre comme informé ci-dessous.
 
 \insererfigure{fig/fig2_PhasesProjet.png}{5cm}{Cycle du projet pour une évolution.}{Cycle de vie}
 
-Malgré le fait qu'il s'agisse d'un développement en V ou normalement le client est exclus du processus de développement. Dans le cas de ce projet, des réunions hebdomadaire sont organiser, afin faire le point sur les problèmes globaux, les timelines, ainsi que l'assurance des actions de chaque acteurs du projet..
+Malgré le fait qu'il s'agisse d'un développement en V ou normalement le client est exclut du processus de développement. Dans le cas de ce projet, des réunions hebdomadaires sont organisées, afin faire le point sur les problèmes globaux, les timelines, ainsi que l'assurance des actions de chaque acteur du projet.
+
+\subsection{Conclusion}
+
+Le projet Pacifica est considéré comme un petit projet, avec une poignée de développeurs.\\
+A ses débuts, l'activité était bien plus importante avec davantage d'ingénieurs. Cependant, étant un projet en développement en V dépendant des expressions de besoins du client, il connaît des périodes d'activité réduite justifiant parfois la diminution d'effectifs.\\
+
 
 \newpage
 
 %---------------- Chapter 5 -------------------
 \section{Travaux effectués}
 
-Ce troisième chapitre traite de mon activité lors du stage. Dans un premier temps, je vais parler du calendrier de mes actions, pour ensuite rentrer dans les détails de chacune de mes activités jugées plus importantes.
+Ce chapitre traite de mon activité lors du stage. Dans un premier temps, je vais parler du calendrier de mes actions, pour ensuite rentrer dans les détails de chacune de mes activités jugées plus importantes.
 
 \subsection{Calendrier}
 
-Mon stage s'est déroulé du 28/05/2018 au 31/08/2018:\\
+Mon stage s'est déroulé du 04/03/2019 au 30/08/2019:\\
 
-\insererfigure{fig/fig3_Calendar.png}{4cm}{Calendrier d'actions lors de mon stage.}{Calendar}
+\insererfigure{fig/fig14_Calendar.png}{6.5cm}{Calendrier d'actions lors de mon stage.}{Calendar}
 
-Il a consisté en plusieurs petites actions tout le long de ces 3 mois. Je vais rester relativement global dans ce calendrier car il s'agit de la trame globale de mon stage, sachant que je suis revenu sur des travaux précédents après être passé à un sujet différent.
+Il a consisté en plusieurs petites actions tout le long de ces six mois. Ce calendrier est relativement général, car il s'agit de la trame globale de mon stage, considérant le fait que je suis revenu sur des travaux précédents après être passé à un sujet différent.
 
 \subsection{Tâches}
 
 Par ordre chronologique, je vais maintenant décrire mes tâches accomplies durant ce stage. 
 
-\subsubsection{Découvertes}
+\subsubsection{Découverte du projet}
 
-A mon arrivée sur le projet, je devais d'abord m'installer avec le PC qui m'a été fourni. Il s'agissait d'installer les logiciels utilisés comme par exemple TortoiseSVN, ainsi que Qt Creator.\\
-La première compilation m'a alors laissé le temps de parcourir la documentation Qt et C++, n'ayant jamais touché à ces technologies. Cette période a aussi été l'occasion pour moi de découvrir le projet Cadenv au travers de différentes documentations qui étaient disponibles.\\
+A mon arrivée sur le projet, je devais d'abord m'installer avec le PC qui m'a été fourni. Il s'agissait d'installer les deux environnements de développement pour le bandeau est Ocean.\\
+Pour cela des documents d'installation étaient rédigées pour informer des outils et configurations nécessaire pour chaque écosystèmes. Bien que parfois obsolète ou obscure, Matthias à été présent pour m'aider.\\
 
-Ces premières semaines m'ont permis d'appréhender les différents acteurs chez Capgemini, rencontrer le CE, les RH et RM, et bien évidemment les membres de l'équipe. De plus, une présentation (OnBoarding) sur la journée du 5 Juin 2018 a été organisée par le groupe pour présenter l'entreprise aux nouveaux stagiaires.
+Au terme de cette installation je me suis retrouvé avec les outils suivant:\\
 
-\subsubsection{Correction trigger}
+\begin{itemize}
+  \item Visual Studio 2013 et 2015, les IDE (environnement de développement intégré) des projet Bandeau et Ocean respectivement. Ils supportent chacun la version MSBuild et .NET nécessaire pour leurs propre projets, avec divers plugins:\\
+  
+    \begin{itemize}
+        \item AnkhSVN, pour accéder au repository distant SVN directement depuis l'IDE\\
+  
+        \item StyleCop, afin de s'assurer de l'homogénéité du code produit en appliquant des régles de syntax supplémentaire.\\
+  
+        \item PartCover qui lors des tests MSBuild, permet de mesurer la couverture de tests de l'application.\\
+    \end{itemize}
 
-Très rapidement, une tâche m'a été attitré: une correction sur un souci relevé lors d'un précédent point de visibilité.\\
-C'était pour moi l'occasion, tout en continuant d'apprendre le langage, framework et IDE, de tester mes nouvelles connaissances.\\
+  \item TortoiseSVN pour accéder au repository distant SVN indépendemment.\\
+  
+  \item Cisco IP Communicator avec PhonerLite\\
+  
+  \item Genesys configuration Manager\\
+  
+  \item Ainsi que des outils utiles du type: soapUI, Postman, mgRemote.\\
+  
+\end{itemize}
+
+Ainsi que mon propre profil configuré genesys et cisco, pour interagir avec les deux solutions du projet comme un véritable utilisateurs, avec ses propres compétences et accès paramétrables.\\
+
+Cette période à aussi été pour moi l'occasion de découvrir l'environnement .NET que je ne connaissait pas, en parcourant les différentes documentations, ou suivant des tutoriels explicatifs, disponible sur le net. Me focalisant sur les framework que j'utiliserais, à savoir ASP.NET MVC et WPF.\\
+Tout comme parcourir les documentations fonctionnelles, administrative et d'architectures des deux application Bandeau et Ocean pour en comprendre le comportement et les enjeux.\\
+
+Ces premières semaines m'ont permis de rencontrer a nouveaux les différents acteurs chez Capgemini: le CE, les Ressources Humaines et Ressources Managers.\\ 
+
+De plus, une présentation (OnBoarding) sur la journée du 5 Juin 2018 a été organisée par le groupe pour présenter l'entreprise aux nouveaux stagiaires.
+
+\subsubsection{Préparation Evolution WFM [OCEAN]}
+
+Très rapidement, une première tâche m'a été attitrée: Une expression de besoin pour Ocean venait d'être traitée, entraînant une proposition commerciale pour le client. En attente de leur réponse et le projet étant occupé sur d'autres évolutions, j'ai été attribué à préparer l'arrivée de cette nouvelle fonctionnalité en instaurant le squelette de cette dernière au sein de l'architecture de l'application.\\
+
+Cette future évolution consistait à créer une fonctionnalité dans l'application Ocean, pour accueillir une nouvelle solution pour le centre de contact de l'assureur: \\
+la solution Work Force Management (WFM) de la suite genesys, qui offre la possibilité de générer des emplois du temps optimaux pour les agents d'un centre de contact, tout en considérant des contraintes des employés et les prédictions de l'affluence de la clientele.
+
+
+
+
+Il s'agissait d'incorporer au projet Ocean un nouveau 
+
+Avant même de lancer officiellement le développement, j'ai été attribué a préparer l'arrivée de cette nouvelle fonctionnalité.\\
+C'était pour moi l'occasion, tout en continuant d'apprendre le langage framework et IDE, de tester mes nouvelles connaissances.\\
 
 Le Module Réverbéré de l'application permet de déterminer la distance d'un corps étranger grâce à la mesure d'écho d'un sonar. L'application devait fournir un système de trigger automatique lorsque le sonar avait fini d'émettre son onde. Cela signifie qu'on écoute un balayage lorsque l'émetteur a fini d'émettre (front descendant).\\
 
@@ -526,7 +589,7 @@ Voici un schéma du trigger pour le balayage:
 \insererfigure{fig/fig4_GraphTrigger.png}{6cm}{Enchaînement du balayage après le trigger.}{GraphTrigger}
 
 Ma correction devait valider l'enregistrement d'un nouveau front au niveau du trigger, lorsque n points successifs de l'acquisition sont du même état. (Haut/Bas)\\
-Par exemple, si n point successifs sont au-dessus du seuil du trigger (seuil d'activation) et étant en état bas, on enregistre alors un front montant.\\
+Par exemple, si n points successifs sont au-dessus du seuil du trigger (seuil d'activation) et étant en état bas, on enregistre alors un front montant.\\
 
 J'ai aussi ajouté la possibilité de relancer un balayage quand un front descendant venait d'être rencontré pendant le précédent. Cela simplifie la vie de l'utilisateur dans le cas où il fournirait un balayage avec une gamme trop grande.
 
@@ -535,7 +598,7 @@ J'ai aussi ajouté la possibilité de relancer un balayage quand un front descen
 Une fois la correction proposée, il se posait le problème de tester son bon fonctionnement. \\
 
 Avant mon arrivée avait été développée une application permettant, au travers de boîtiers Nudaqs, des fichiers CSV et de véritable valeurs de sonars, de simuler l'acquisition en temps réel sur Cadenv.\\
-Le soucis étant que ces fichiers CSV sont incompréhensibles pour un humain (énormément de valeurs et parfois inversées). Il était donc impossible d'observer les deux courbes et s'assurer qu'un balayage était lancé au bon moment.
+Le soucis existant est que ces fichiers CSV sont incompréhensibles pour un humain (énormément de valeurs et parfois inversées). Il était donc impossible d'observer les deux courbes et s'assurer qu'un balayage était lancé au bon moment.
 
 \insererfigure{fig/fig5_SimuOG.png}{6cm}{Simulateur d'origine.}{SimuOG}
 
@@ -544,7 +607,7 @@ C'est alors que vient la proposition de développer une amélioration du simulat
 
 \insererfigure{fig/fig6_SimuUp.png}{7cm}{Simulateur mis à jour.}{SimuUp}
 
-On peut voir différentes modifications, comme par exemple l'ajout de paramètres dans la fenêtre principale (le choix des séparateurs dans le fichier CSV, ou encore l'existence de header). On a aussi la possibilité de choisir quelles courbes on veut voir, changeant la second fenêtre lorsqu'on lance la simulation.\\
+On peut voir différentes modifications, comme par exemple l'ajout de paramètres dans la fenêtre principale (le choix des séparateurs dans le fichier CSV, ou encore l'existence de header). On a aussi la possibilité de choisir quelle courbe on veut voir, changeant la seconde fenêtre lorsqu'on lance la simulation.\\
 Enfin le graphe Qt est manipulable à l'aide des boutons sur la droite, afin de pouvoir comparer les deux courbes.\\
 
 Cette partie a pour moi été l'occasion de découvrir le moyen d'ouvrir des fenêtres, d'ajouter des widgets, et de les faire interagir entre eux avec Qt.
@@ -557,7 +620,7 @@ Elle m'a permis d'appréhender le projet dans son intégralité, comprendre le p
 
 \subsubsection{Nouveau simulateur}
 
-Une nouvelle branche du projet a été entamée à mon arrivé. Nommée en interne Cadenv FTI, il s'agit d'un portage pour les futurs bâtiments de la Marine Nationale, les Frégates de Taille Intermédiaires (FTI). Ces navires ne dépendront plus de systèmes analogiques, et toutes les informations entre systèmes seront échangées au travers d'une couche réseau sécurisée du bateau, sous forme de trames.\\
+Une nouvelle branche du projet a été entamée à mon arrivée. Nommée en interne Cadenv FTI, il s'agit d'un portage pour les futurs bâtiments de la Marine Nationale, les Frégates de Taille Intermédiaire (FTI). Ces navires ne dépendront plus de systèmes analogiques, et toutes les informations entre systèmes seront échangées au travers d'une couche réseau sécurisée du bateau, sous forme de trames.\\
 
 Il n'est donc plus question de boîtiers branchés au pc, mais plutôt la récupération des trames via sockets UDP ou TCP selon les messages. Les simulateurs hors FTI sont donc obsolètes et l'une de mes missions a été de créer en partant de rien un nouveau simulateur Réverbéré Bruit FTI. Le simulateur jouerait le rôle de serveur avec l'utilisateur qui décide quels messages envoyer. \\
 
