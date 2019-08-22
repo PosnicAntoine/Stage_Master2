@@ -132,7 +132,7 @@ En effet, comme on peut voir sur la figure ci dessous, on a ici la possibilité 
 
 Enfin, comme il s'agit d'une ESN touchant à un large horizon de projets, les RM affirment être disponibles pour assurer une possible migration vers d'autres projets. 
 
-\subsection{Conclusion}
+\subsection*{Conclusion}
 
 Capgemini est une grande entreprise réputée dans le monde du Digital. Sa taille offre une diversité non négligeable de projets, la qualifiant ainsi souvent d'une entreprise initiatique pour de nouveaux arrivant dans le monde du numérique.
 Elle offre de nombreux avantages, et promet une flexibilité dans le plan de carrière de ses collaborateurs.
@@ -195,7 +195,7 @@ Mais l'un des composants principaux de configuration est le Configuration Manage
 
 Tout ces outils de configurations permettent l'intégration de solutions de centre de contact, peu importe l'activité ou le scope de l'entreprise nécessitant ce centre.
 
-\subsection{Conclusion}
+\subsection*{Conclusion}
 
 Les centres de contacts jouent un rôle primordiale dans l'activité d'une entreprise au service de particuliers. Ils permettent à la fois d'entretenir une bonne relation client avec l'entreprise, et de fournir des services qui sont nécessaire pour son bon fonctionnement.\\
 Évidemment les services et le fonctionnement d'un centre de contact varie énormément selon l'activité de la société. Selon le type d'activité ou encore la taille de cette dernière, pratiquement chacune nécessite sa propre solution selon ses problématiques.\\
@@ -441,7 +441,7 @@ Pour les autres outils, on retrouve un repository Subversion (SVN) pour la gesti
 Une plateforme de test HP Application Lifecycle Management (HP AML) pour les tests fonctionnels, et le reporting de defects par le client.\\
 Et enfin, pour l'environnement de compilation, un Jenkins permettant d'automatiser le build de livraison, tout comme de lancer des builds journaliers pour s'assurer de l'intégrité du SVN après les commits de la journée.
 
-\subsection{Conclusion}
+\subsection*{Conclusion}
 
 Le projet Pacifica chez Capgemini a pour but d'entretenir et faire évoluer deux applications pour la filiale d'assurance aux dommages du Crédit Agricole. Elles doivent s'intégrer et utiliser l'écosystème Genesys installé  afin de répondre aux besoins de leurs centres de contact.\\
 
@@ -502,7 +502,7 @@ Toute évolution commence avec une Expression de Besoin (EB) rédigée par le cl
 
 Malgré le fait qu'il s'agisse d'un développement en V ou normalement le client est exclut du processus de développement. Dans le cas de ce projet, des réunions hebdomadaires sont organisées, afin faire le point sur les problèmes globaux, les timelines, ainsi que l'assurance des actions de chaque acteur du projet.
 
-\subsection{Conclusion}
+\subsection*{Conclusion}
 
 Le projet Pacifica est considéré comme un petit projet, avec une poignée de développeurs.\\
 A ses débuts, l'activité était bien plus importante avec davantage d'ingénieurs. Cependant, étant un projet en développement en V dépendant des expressions de besoins du client, il connaît des périodes d'activité réduite justifiant parfois la diminution d'effectifs.\\
@@ -519,15 +519,14 @@ Ce chapitre traite de mon activité lors du stage. Dans un premier temps, je vai
 
 Mon stage s'est déroulé du 04/03/2019 au 30/08/2019:\\
 
-\insererfigure{fig/fig14_Calendar.png}{6.5cm}{Calendrier d'actions lors de mon stage.}{Calendar}
+\insererfigure{fig/fig14_Calendar.png}{6.5cm}{Calendrier d'actions lors de mon stage}{Calendar}
 
-Il a consisté en plusieurs petites actions tout le long de ces six mois. Ce calendrier est relativement général, car il s'agit de la trame globale de mon stage, considérant le fait que je suis revenu sur des travaux précédents après être passé à un sujet différent.
+Il a consisté en plusieurs petites actions tout le long de ces six mois. Ce calendrier est relativement général, car il s'agit de la trame globale de mon stage, considérant le fait  que je suis revenu sur des travaux précédents après être passé à un sujet différent.\\
 
-\subsection{Tâches}
+Par ordre catégories, je vais maintenant décrire mes tâches accomplies durant ce stage. 
 
-Par ordre chronologique, je vais maintenant décrire mes tâches accomplies durant ce stage. 
-
-\subsubsection{Découverte du projet}
+\newpage
+\subsection{Découverte du projet}
 
 A mon arrivée sur le projet, je devais d'abord m'installer avec le PC qui m'a été fourni. Il s'agissait d'installer les deux environnements de développement pour le bandeau est Ocean.\\
 Pour cela des documents d'installation étaient rédigées pour informer des outils et configurations nécessaire pour chaque écosystèmes. Bien que parfois obsolète ou obscure, Matthias à été présent pour m'aider.\\
@@ -535,23 +534,23 @@ Pour cela des documents d'installation étaient rédigées pour informer des out
 Au terme de cette installation je me suis retrouvé avec les outils suivant:\\
 
 \begin{itemize}
-  \item Visual Studio 2013 et 2015, les IDE (environnement de développement intégré) des projet Bandeau et Ocean respectivement. Ils supportent chacun la version MSBuild et .NET nécessaire pour leurs propre projets, avec divers plugins:\\
+  \item Visual Studio 2013 et 2015, les IDE (environnement de développement intégré) des projet Bandeau et Ocean respectivement. Ils supportent chacun la version MSBuild et .NET nécessaire pour leurs propre projets, avec divers plugins:
   
     \begin{itemize}
-        \item AnkhSVN, pour accéder au repository distant SVN directement depuis l'IDE\\
+        \item AnkhSVN, pour accéder au repository distant SVN directement depuis l'IDE
   
-        \item StyleCop, afin de s'assurer de l'homogénéité du code produit en appliquant des régles de syntax supplémentaire.\\
+        \item StyleCop, afin de s'assurer de l'homogénéité du code produit en appliquant des règles de syntax supplémentaire.
   
-        \item PartCover qui lors des tests MSBuild, permet de mesurer la couverture de tests de l'application.\\
+        \item PartCover qui lors des tests MSBuild, permet de mesurer la couverture de tests de l'application.
     \end{itemize}
 
-  \item TortoiseSVN pour accéder au repository distant SVN indépendemment.\\
+  \item TortoiseSVN pour accéder au repository distant SVN indépendemment.
   
-  \item Cisco IP Communicator avec PhonerLite\\
+  \item Cisco IP Communicator avec PhonerLite pour simuler le téléphone d'un agent sur le bandeau.
   
-  \item Genesys configuration Manager\\
+  \item Genesys configuration Manager (CME)
   
-  \item Ainsi que des outils utiles du type: soapUI, Postman, mgRemote.\\
+  \item Ainsi que divers outils utiles du type: soapUI, Postman, mgRemote.
   
 \end{itemize}
 
@@ -562,78 +561,212 @@ Tout comme parcourir les documentations fonctionnelles, administrative et d'arch
 
 Ces premières semaines m'ont permis de rencontrer a nouveaux les différents acteurs chez Capgemini: le CE, les Ressources Humaines et Ressources Managers.\\ 
 
-De plus, une présentation (OnBoarding) sur la journée du 5 Juin 2018 a été organisée par le groupe pour présenter l'entreprise aux nouveaux stagiaires.
+\newpage
+\subsection{Evolution WFM pour OCEAN}
 
-\subsubsection{Préparation Evolution WFM [OCEAN]}
+Cette évolution consistait à créer une fonctionnalité dans l'application Ocean, pour accueillir une nouvelle solution pour le centre de contact de l'assureur: \\
+la solution Work Force Management (WFM) de la suite genesys, qui offre la possibilité de générer des emplois du temps optimaux pour les agents d'un centre de contact, tout en considérant des contraintes des employés et les prédictions de l'affluence de la clientèle.\\
 
-Très rapidement, une première tâche m'a été attitrée: Une expression de besoin pour Ocean venait d'être traitée, entraînant une proposition commerciale pour le client. En attente de leur réponse et le projet étant occupé sur d'autres évolutions, j'ai été attribué à préparer l'arrivée de cette nouvelle fonctionnalité en instaurant le squelette de cette dernière au sein de l'architecture de l'application.\\
+Ne possédant pas la connaissance métier des contraintes d'emplois du temps d'un agent de centre de contact, le client a décider de faire appel a une entreprise tiers spécialisée dans la configuration de ce types de solutions. Ils ont été ainsi demandé d'installer l'environnement WFM chez pacifica, et fournir un webservice permettant le lancement de deux types de planification WFM:
+\begin{itemize}
+  \item Planification Horaire
+  \item Planification Session
+\end{itemize}
 
-Cette future évolution consistait à créer une fonctionnalité dans l'application Ocean, pour accueillir une nouvelle solution pour le centre de contact de l'assureur: \\
-la solution Work Force Management (WFM) de la suite genesys, qui offre la possibilité de générer des emplois du temps optimaux pour les agents d'un centre de contact, tout en considérant des contraintes des employés et les prédictions de l'affluence de la clientele.
+Ocean devras alors implémenter ce webservice, pour permettre aux administrateurs de lancer chacune de ces planifications au sein de nouveaux onglets.\\
 
+Un gros soucis émergeas cependant lors de la réalisation que l'entreprise contractée par le client, n'avait pas un corps de métier pour le développement. Résultant en un webservice plus que questionnable, que Capgemini devait implémenter dans sa solution, et en fournir le support ensuite.
 
+\subsubsection{Préparation de l'évolution}
 
+Dés mon arrivée, une première expression de besoin pour cette évolution d'Ocean venait d'être traitée. Elle ne traitait pour le moment que de l'instauration de la planification horaire a l'outil OCEAN. La seconde planification (planification session) était arriverait par la suite. Ainsi, l'équipe rédigeas une proposition commerciale pour client comportant un chiffrage de cette action.\\
+En attente d'une réponse et le projet étant occupé sur d'autres évolutions, j'ai été rapidement attribué à préparer l'arrivée de cette nouvelle fonctionnalité en instaurant le squelette de cette dernière au sein de l'architecture de l'application.\\
 
-Il s'agissait d'incorporer au projet Ocean un nouveau 
+\begin{minipage}{0.35\textwidth}
+\insererfigure{fig/fig15_WFMArchitecture.png}{7cm}{Architecture du module Planification}{WFMModuleArchi}
+\end{minipage}
+\begin{minipage}{0.55\textwidth}
+Je me suis donc lancé dans la réalisation d'un nouveau module dans la couche client d'OCEAN, qui comporteras les fonctions pour les deux types de planifications.\\
+Me référant aux maquettes proposé lors de l'expression de besoins, ainsi que la structure globale de l'application, j'ai ensuite crée la nouvelle fonctions pour la planification horaire. L'idée étant d'avoir une interface homme machine fonctionnelle, en attendant la livraison du webservice.\\
 
-Avant même de lancer officiellement le développement, j'ai été attribué a préparer l'arrivée de cette nouvelle fonctionnalité.\\
-C'était pour moi l'occasion, tout en continuant d'apprendre le langage framework et IDE, de tester mes nouvelles connaissances.\\
+Cette interface se devait d'être configurable depuis le configuration manager (CME) pour des modification fonctionnelles, ainsi que des fichiers ressources pour tout les labels de la page.
+\end{minipage}
+\vspace{5mm} %5mm vertical space
 
-Le Module Réverbéré de l'application permet de déterminer la distance d'un corps étranger grâce à la mesure d'écho d'un sonar. L'application devait fournir un système de trigger automatique lorsque le sonar avait fini d'émettre son onde. Cela signifie qu'on écoute un balayage lorsque l'émetteur a fini d'émettre (front descendant).\\
+Une particularité de cette fonction existe cependant: Comme le reste des modules, uniquement certains types d'administrateurs sur OCEAN peuvent avoir accès a la planification horaire, mais ici son fonctionnement change par la même occasion selon les accréditations de l'utilisateur.\\
+Ainsi, deux types de personnes ont accés a cet onglet, DSI et UGS (termes métier):\\
 
-On a alors deux entrées, celle du trigger et celle du bruit. Il s'agit de deux informations enregistrées analogiquement, elles sont donc sujettes aux interférences. Les courbes étant traitées point par point en temps réel, ces interférences nous empêche de faire un choix sur un unique point. Avec uniquement ce dernier, il est possible que le bruit soit interprété comme un front montant ou descendant, entraînant un nouveau balayage non désiré.\\
+L'administrateur DSI, considéré comme supérieur dans les autorisations à le droit à d'avantage de fonctionnalités:\\
+\includegraphics[width=.95\textwidth]{fig/fig18_PlanoHDSIFonct.png}
+\insererfigure{fig/fig16_PlanoHDSI.png}{7cm}{Planification Horaire pour utilisateur DSI}{PlanoHDSI}
 
-Voici un schéma du trigger pour le balayage:
+Tandis que l'UGS est beaucoup plus limité:\\
+\includegraphics[width=.95\textwidth]{fig/fig19_PlanoHUGSFonct.png}
+\insererfigure{fig/fig17_PlanoHUGS.png}{7cm}{Planification Horaire pour utilisateur UGS}{PlanHoUGS}
 
+Cette phase a été pour moi l'occasion, tout en continuant d'en apprendre plus sur le langage et le framework, de tester mes nouvelles connaissances.\\
+Elle m'a aussi permis de découvrir de façon concrète l'architecture et les dogmes de l'application OCEAN. Ainsi que la librairie Kendo de telerik, utilisé ici pour les composant d'interface Homme Machine (IHM).\\
 
-\insererfigure{fig/fig4_GraphTrigger.png}{6cm}{Enchaînement du balayage après le trigger.}{GraphTrigger}
+\subsubsection{Industrialisation du WebService WFM}
 
-Ma correction devait valider l'enregistrement d'un nouveau front au niveau du trigger, lorsque n points successifs de l'acquisition sont du même état. (Haut/Bas)\\
-Par exemple, si n points successifs sont au-dessus du seuil du trigger (seuil d'activation) et étant en état bas, on enregistre alors un front montant.\\
+Dés lors que nous avons reçu les sources du webservice, nous avons pus constater les soucis qui allaient nous être posé. Résultat d'une années entière de développement par des personnes qui ne sont pas développeurs, il s'agissait d'un unique fichier C\# de 7000 lignes, mélangeant paramètres, données, logique métier, WebMethods ou encore classes d'objets. Avec des fonctions pouvant aller jusqu'au millier de lignes, des signature de plus de 20 paramètres, des cascades de conditionnelles imbriquées et aucunes documentations.\\
 
-J'ai aussi ajouté la possibilité de relancer un balayage quand un front descendant venait d'être rencontré pendant le précédent. Cela simplifie la vie de l'utilisateur dans le cas où il fournirait un balayage avec une gamme trop grande.
+\insererfigure{fig/fig20_WFMWebSvcExemple.png}{2cm}{Exemple d'une signature de fonction originelle}{WebSvcEx}
 
-\subsubsection{Amélioration simulateur}
+Ce webservice tombant sous la responsabilité de Capgemini, une fois intégré au projet OCEAN, il était primordiale de reprendre ce dernier pour le rendre industrialisable. En prévision notamment de future évolutions sur ce service, ainsi que de la maintenance de ce dernier.\\
 
-Une fois la correction proposée, il se posait le problème de tester son bon fonctionnement. \\
+Lors de cette étape j'ai donc fait en premier lieu de la rétro-ingénierie, afin d'essayer de comprendre la trame globale des appels. Aidé de SonarQube, cela m'a permis de parcourir tout le webservice, corrigeant les nombreux codes smells trouvé par cet outil, tout comme découvrir de possibles bugs.\\
+Ensuite accompagné de Mohammed HAMMAMI, nous partageant en deux les taches, nous avons rédigé la documentation hautement nécessaire du webservice. Préparant à la fois au découpage en fonctions avec une logique minimale.\\
 
-Avant mon arrivée avait été développée une application permettant, au travers de boîtiers Nudaqs, des fichiers CSV et de véritable valeurs de sonars, de simuler l'acquisition en temps réel sur Cadenv.\\
-Le soucis existant est que ces fichiers CSV sont incompréhensibles pour un humain (énormément de valeurs et parfois inversées). Il était donc impossible d'observer les deux courbes et s'assurer qu'un balayage était lancé au bon moment.
+Cette période de mon stage, bien qu'exténuante, m'a entraîné dans la reprise de code inconnus. Exercice que je considère encore a ce jour, compliqué mais primordiale.
 
-\insererfigure{fig/fig5_SimuOG.png}{6cm}{Simulateur d'origine.}{SimuOG}
+\subsubsection{Intégration WFM}
 
-C'est alors que vient la proposition de développer une amélioration du simulateur, permettant d'observer les valeurs pré-enregistrées du CSV. On verrait ainsi le graphe du trigger et de la réverbération, offrant la possibilité de comparer les deux.
+Une fois la documentation et le nettoyage d'une majorité des codes smells, avec Mohammed HAMMAMI, nous nous sommes lancé dans le découpage des 4 méthodes du WebService afin de les intégrer a l'architecture des services OCEAN. 
 
+\begin{minipage}{0.35\textwidth}
+\insererfigure{fig/fig12_OceanWebservicesArchi.png}{3cm}{WebServices}{OceanWebservicesArchibis}
+\end{minipage}
+\begin{minipage}{0.55\textwidth}
+Séparé de telle façon que la façade du webservice soit situé dans "Service" afin de jouer le rôle d'API. La logique métier dans "Rules", les appels minimaux vers la solution WFM Genesys dans la section "DAL" et "BO" pour les données et paramètres manipulés.
+\end{minipage}
+\vspace{5mm} %5mm vertical space
+\\
 
-\insererfigure{fig/fig6_SimuUp.png}{7cm}{Simulateur mis à jour.}{SimuUp}
+Cela a été pour moi l'occasion de pratiquer sur une partie encore en partie inconnue de l'application OCEAN, appréhendant l'architecture de cette dernière pour ses services.
 
-On peut voir différentes modifications, comme par exemple l'ajout de paramètres dans la fenêtre principale (le choix des séparateurs dans le fichier CSV, ou encore l'existence de header). On a aussi la possibilité de choisir quelle courbe on veut voir, changeant la seconde fenêtre lorsqu'on lance la simulation.\\
-Enfin le graphe Qt est manipulable à l'aide des boutons sur la droite, afin de pouvoir comparer les deux courbes.\\
+\subsubsection{Connections WFM au Front-End}
 
-Cette partie a pour moi été l'occasion de découvrir le moyen d'ouvrir des fenêtres, d'ajouter des widgets, et de les faire interagir entre eux avec Qt.
+Une fois le webservice entièrement intégré et fonctionnel, il ne restait plus qu'a connecté les appels à mon Interface Homme Machine (IHM) au travers de la référence du service WFM maintenant crée. Tout en s'assurant du bon fonctionnement des requêtes AJAX envoyé par le javascript.\\
+
+Mon code arrivant à sa finalisation, l'heure est venue de le faire révisionner par une personne avec d'avantages d'expérience. Ainsi Mohammed HAMMAMI, architecte d'OCEAN a pu me donner des point d'améliorations ainsi que divers conseils, comme l'utilisation de certains composants existant dans la solution pour améliorer l'expérience utilisateur. Cela entraînas alors par la suite quelques améliorations de ma part sur mon interface.\\
+
+Une fois validé par l'équipe il ne me restait plus qu'a passer ma production sous l'outil StyleCop, afin de respecter les règles de rédaction de code du projet, et rajoutant parfois des commentaires additionnels.\\
+
+\begin{minipage}{0.55\textwidth}
+\insererfigure{fig/fig21_PlanHoDiagramm.png}{9cm}{Diagramme de séquence d'une planification horaire}{PlanHoDiagramm}
+\end{minipage}
+\begin{minipage}{0.35\textwidth}
+La fonction "Planification Horaire" désormais développée et le webservice intégré à la solution:\\
+
+Une planification horaires envoyée par un utilisateur UGS de l'application OCEAN se déroule de la façon ci-contre.\\
+
+Quatre appels séquentiels ont lieu vers le webservice WFM contenant la logique pour le paramétrage, au travers d'appels, de la solution WFM Genesys.
+
+\end{minipage}
+\vspace{5mm} %5mm vertical space
+\\
+
+Finalisant les taches de développement pour la fonction de planification horaire du module WFM, j'ai reçu des avis sur mon code, me permettant d'améliorer l'ergonomie et ne pas oublier des cas d'utilisation extrêmes.
+
+\subsubsection{Tests WFM}
+
+Jusqu'ici, afin de s'assurer du bon fonctionnement du webservice, nous nous sommes assurer de la génération de tables de planifications dans l'outil WFM de Genesys après que le webservice soit appelé.\\
+Il nous fallait cependant tester l'intégrité du webservice une fois optimisé et découpé dans notre solution, afin de s'assurer de son bon fonctionnement. De par la nature possiblement imprévisible de la planification Genesys, il nous était impossible de tester le résultat de cette dernière en comparant tout simplement la planification du webservice originel à la notre.\\
+
+Il s'agissait ici d'un point critique de la reprise du webservice:\\
+Nous ne pouvions laisser le webservice en l'état a sa réception. Mais l'industrialiser risquait d'impacter la logique de ce dernier.\\
+
+Lors de sa production, le webservice était testé à l'aide de tableurs Excel décoré par du Visual Basic, et nourris par les export CSV (Comma-separated values) de la planification générée. Ces tables permettaient notamment de s'assurer du respect des contraintes salariales ou d'activité.\\
+Néanmoins, ces tableurs ont vite été abandonné avec la complexité croissante du webservice, les rendant inutilisable.\\
+Une migration à alors été faite vers l'outil SAS Enterprise Guide, qui permet l'analyse complexe de données. Ce dernier a donc été majoritairement utilisé pour tester la planification et leur aurait permis de valider le webservice.\\
+Cependant ce dernier fût hors de notre portée:\\
+Ne possédant pas la connaissance technique du logiciel (Même après avoir cherché des connaissances auprès des communautés Capgemini), n'ayant pas accès à une licence de l'outil (Absent des outils accessibles par le groupe).\\
+
+\begin{minipage}{0.35\textwidth}
+Il fallait donc trouver une autre solution. Après un brainstorming avec Bastien CLOAREC nous sommes arrivé sous la conclusion que nous pourrions tester la logique en vérifiant les appels envoyé entre le webservice et la solution (Comme pointé ci-contre).\\
+
+Il suffirait d'écouter dans les mêmes conditions; les 4 messages envoyé par le webservice valide et le webservice à tester, vers la solution.\\
+Puis de comparer et étudier les différences dans les paquets partagé, afin de s'assurer du fonctionnement.\\
+\end{minipage}
+\begin{minipage}{0.55\textwidth}
+\insererfigure{fig/fig22_PlanHoDiagrammTests.png}{9cm}{Diagramme de séquence d'une planification horaire}{PlanHoDiagrammTest}
+\end{minipage}
+\vspace{5mm} %5mm vertical space
+\\
+
+Je me suis donc attelé à la mise en place du protocole pour ce test:\\
+A l'aide de WireShark, j'ai donc pus extraire les paquets échangé entre ces deux éléments. Développé en Batch Windows un script pour ranger et supprimer le surplus d'informations dans des fichiers séparé.\\
+(Initialement je voulais le faire en python pour la simplicité, mais ne voulant pas alourdir l'environnement de développement déjà imposant, je me suis orienté vers une technologie que tout le monde avait déjà sur son poste)\\
+Pour enfin passer chaque fichiers dans un outil de comparaison comme WinMerge.\\
+
+Cette technique bien que rébarbative m'a permis, après les premiers passages, de déceler quelques erreurs d'inattentions lors du découpage du webservice, pouvant entraîner notamment différents effets de bords indésirable pour la planification.\\
+
+Cette étape m'a permis de refaire un passage sur l'intégration de ce nouveau service, entraînant la résolution de différents bugs. J'y ai aussi passé mon temps pour rédiger les tests fonctionnels de ma fonction OCEAN, en vue de la livraison qui approche, dans l'outil HP Application Lifecycle Management (HP AML). Expliquant notamment en détail le déroulement des tests du webservice.\\
+
+Ce seras plus tard cependant, après un échange avec un ingénieur spécialisé dans les plate-formes de tests, que je découvrit l'existence de Mock Server, qui aurait pu simplifier grandement notre technique de test.
 
 \subsubsection{Documentation}
 
-Dans cette partie, je me suis plongé dans une ancienne documentation obsolète rédigée au début du projet en 2015. Il s'agissait d'une documentation de conception, contenant les choix et but de l'architecture de l'application. \\
+Ici, je me suis plongé dans la rédaction de la documentation pour mes actions sur OCEAN. Tandis qu'en parallèle l'équipe passaient mes tests en prévision de la livraison de l'évolution.\\
 
-Elle m'a permis d'appréhender le projet dans son intégralité, comprendre le pattern design MVC, ainsi que, tout simplement, les rôles de chaque modules pour l'application.
+J'ai ainsi mis a jour les documentations exhaustive suivante:
+    \begin{itemize}
+        \item Documentation d'Administration Fonctionnelle SFDU, pour expliquer le comportement de l'application à un utilisateur
+        \item Documentation d'Administration Technique SFDI, pour expliquer la technique de l'application.
+        \item Document d'exploitation MEX, pour les paramétrage et configuration possible de l'outil, a destination des techniciens installant l'application chez le client.
+    \end{itemize}
 
-\subsubsection{Nouveau simulateur}
-
-Une nouvelle branche du projet a été entamée à mon arrivée. Nommée en interne Cadenv FTI, il s'agit d'un portage pour les futurs bâtiments de la Marine Nationale, les Frégates de Taille Intermédiaire (FTI). Ces navires ne dépendront plus de systèmes analogiques, et toutes les informations entre systèmes seront échangées au travers d'une couche réseau sécurisée du bateau, sous forme de trames.\\
-
-Il n'est donc plus question de boîtiers branchés au pc, mais plutôt la récupération des trames via sockets UDP ou TCP selon les messages. Les simulateurs hors FTI sont donc obsolètes et l'une de mes missions a été de créer en partant de rien un nouveau simulateur Réverbéré Bruit FTI. Le simulateur jouerait le rôle de serveur avec l'utilisateur qui décide quels messages envoyer. \\
-
-Les messages peuvent être générés, pour ensuite être sauvegarder dans un .json où chaque paramètres sont modifiables.\\
-
-Cela m'a permis de me lancer en partant de rien dans une application Qt, ainsi que de toucher à un large panel des libraires fournies par ce framework.
-
-\subsubsection{Tests}
-
-Cadenv est une application qui, comme tous programmes, demande des tests. Ici un des outils utilisé est HP ALM pour les tests de non régression et tests fonctionnels. Des tests unitaires existent à l'aide de Qt Tests, mais j'ai eu l'occasion de tester HP ALM dans le cadre de tests de non régression afin de compléter un nouveau cycle de vie de l'application.
+Au terme de cette période, l'évolution fût envoyé chez le client, terminant cette taches générale pour le projet.
 
 \newpage
+\subsection{Évolution des Documents dans les AcTions pour le Bandeau}
 
+Dans le bandeau, deux types d' AcTions existent dans la bannette d'un utilisateur. On y retrouve les emails et les taches.\\
+Avant cette évolution, seul les emails pouvaient posséder des documents joints sous la forme suivante:
+
+\insererfigure{fig/fig23_PJEmail.png}{5cm}{Modèle de consultation d'un email}{PJEmails}
+
+L'idée de cette évolution est de rajouter dans les taches un composant semblable pour rajouter des pièces jointes à une tache. Impliquant par ailleurs l'intégration des manipulations d'une pièce jointe, ainsi que sa récupération.\\
+
+\subsubsection{Composant pièce jointes dans les AcTions}
+
+Tandis que Bastien CLOAREC s'occupait de modifier le service iWD, un sous-système permettant notamment la création de tâches, afin qu'il supporte des documents joints. Je me suis mis en renfort sur cette évolution afin de rajouter un nouveau composant pour les tâches, permettant d'afficher ces pièces jointes.\\
+
+Une tâche sur le bandeau est modélisé comme un formulaire que l'opérateur remplis. Cependant chaque taches est différentes, et répond à des problématiques métiers différentes. C'est pourquoi leur interface est hautement configurable au sein du Configuration Manager (CME), où il est possible de créer une interface entièrement personnalisée pour une nouvelle tâche, en déclarant pour chaque lignes quels composant ont y retrouve et où.
+
+\insererfigure{fig/fig24_IHMTache.png}{6cm}{Configuration de la première ligne d'une tâche de déclaration d'Iphone}{IHMTache}
+
+Déjà existant sur les emails, pour créer ce nouveau composant, il me suffit de me référer à ce dernier. En m'assurant qu'il soit autonome pour être intégrés aux composants disponibles pour les tâches.\\
+Cependant ce composant utilise une classe "EmailInteraction", foncièrement différente à la nouvelle classe "TaskInteraction", et qui est nécessaire pour la logique des classes fonctionnelles.\\
+Il fut alors pris la décision de créer une interface pour les deux composant, afin que les classes fonctionnelles puissent être réutilisé dans les deux types composants, sans duplication de code. \\
+
+\insererfigure{fig/fig25_EvolutionArchi.png}{6cm}{Comparaison de l'architecture des Interaction avant et après l'évolution}{EvolutionBMArchi}
+
+Cela m'a permis de toucher pour une toute première fois au code du Bandeau, ne découvrant qu'une petite partie de ce dernier, en modifiant cependant beaucoup de classes. Mais au terme de cette évolution, une fois que Bastien CLOAREC en ai finis avec les services pour supporter les pièces jointes, nous avons pus livrer au client. Après une mise a jour des documentation et une période de tests.\\
+
+\insererfigure{fig/fig26_DocumentComponent.png}{1cm}{Composant pièces jointes des taches}{DocumentComponent}
+
+
+\subsubsection{Amélioration pièce jointes dans les AcTions}
+
+Plus d'un mois après la livraison de l'évolution offrant la possibilité à un opérateur de consulter des pièces jointes pour une tâche, une nouvelle expression de besoin arrivas. Il s'agissait d'une amélioration du composant de pièces jointes, afin d'informer l'utilisateur de la mauvaise réception de document(s), et lui permettre de tenter la récupération de ce(s) dernier(s).\\
+
+En effet, avant d'être associé à une tache, les documents qui leurs sont destinés, doivent dans un premier temps passer par un service de catégorisation des fichiers (propre au client, notre projet ni ayant pas accès). Seul soucis, il arrive que ce service tombe, empêchant le traitement de ces documents et donc l'affiliation à une tache.\\
+
+Ainsi, le nouveau composant des pièces jointes se devait à la fois d'informer du manque de documents pour l'agent, mais aussi offrir une possibilité de relancer la catégorisation afin de récupérer les pièces.\\
+
+\insererfigure{fig/fig27_DocumentComponentError.png}{0.5cm}{Composant pièces jointes des taches avec erreurs}{DocumentComponentError}
+
+Cette amélioration à demander une retouche, de Bastien CLOAREC, des services pour informer le Front-End. Tandis que j'appliquas les modification sur mon Interface Homme Machine (IHM).\\
+
+Après une seconde mise a jour des documentation et une période de tests, cette évolution fût livrée.\\
+
+\newpage
+\subsection{Autres}
+Je vais ici parler des petites actions réalisé, ne méritant pas d'une partie à elles toutes seules.\\
+Ainsi je vais parler des divers livraison et périodes de tests dans lesquels j'étais impliqué; des quelques corrections d'anomalies sur lesquels j'ai joué un rôle; l'expression de besoin pour laquelle j'ai participé à l'estimation du chiffrage des actions; une étude sur l'environnement jenkins déjà en place; et enfin les différentes formations que j'ai pus assister lors de mon stage.
+
+\subsubsection{Livraisons}
+\subsubsection{Corrections d'anomalies}
+\subsubsection{Étude d'expression de besoins}
+\subsubsection{Étude environnement Jenkins}
+\subsubsection{Formations}
+
+
+
+
+\newpage
 %-----------------BILAN -----------------------------
 \section{Bilan}
 
