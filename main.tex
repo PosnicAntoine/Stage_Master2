@@ -207,34 +207,34 @@ Pour cela, des solutions comme Genesys permettent d'offrir des solutions industr
 %---------------- Chapter 3 -------------------
 \section{Pacifica}
 
-Destinée à une compagnie d'assurances aux dommages, déclarant en 2018 comme étant le premier bancassureur dommages de France, avec 12 millions de contrats sous sa tutelle et 3.77 milliards de chiffres d'affaires.\\
+Le projet Pacifica est destiné à une compagnie d'assurances aux dommages, déclarant en 2018 comme étant le premier bancassureur dommages de France, avec 12 millions de contrats sous sa tutelle et 3.77 milliards de chiffres d'affaires.\\
 
-Pacifica répond donc aux problématiques d'un relativement grand groupe de services d'assurances pour particuliers. Nécessitant l'implémentation de centres de contact, afin d'offrir leurs services à leurs clients. Ce groupe a fait appel à Capgemini afin de concevoir et maintenir deux solutions primordiales pour le bon fonctionnement des centres de contact du groupe.
+Il répond donc aux problématiques d'un relativement grand groupe de services d'assurances pour particuliers. Nécessitant l'implémentation de centres de contact, afin d'offrir leurs services à leurs clients. Ce groupe a fait appel à Capgemini afin de concevoir et maintenir deux solutions primordiales pour le bon fonctionnement des centres de contact du groupe.
 
 Pour commencer, je vais expliquer les problématiques globales du projet, avant de décrire plus en détail chacune des deux applications qu'il conçoit et maintient.
 
 
 \subsection{Le projet Pacifica}
 
-Le projet Pacifica développe et entretien deux applications hautement configurables : le bandeau et Ocean.\\
+Le projet Pacifica développe et entretien deux applications hautement configurables : le Bandeau et OCEAN.\\
 Ces deux projets répondent chacun à des problématiques distinctes pour un centre de contact, mais utilisent et partagent toutes deux des services et entités communes. Le tout, grâce au pro-logiciel Genesys qui leur permet à la fois de manipuler et stocker des données nécessaires pour le métier, mais aussi de configurer ces deux applications pour satisfaire leur architecture d'application hautement configurable.\\
 Cela leur permet par exemple de réarranger des modules, changer de formats de données, ou encore designer leurs propres pages en fonction de divers paramètres comme le type d'utilisateur ou les types de sites. Le tout est possible sans toucher une ligne de code et en temps réel (juste rafraîchir l'application) au travers du configuration manager (CME).
 
-Contrairement au reste du cluster Centres de contact, le projet Pacifica ne s'occupe pas de la partie Genesys. En effet, la filiale possède déjà une équipe travaillant autour de la solution, configurant leurs propres environnements pour les différents sites et opérateurs sous leur responsabilité. Ainsi, ils s'occupent de toute cette partie pouvant aller des règles de routages au management des équipes, tout en passant par les systèmes de monitoring, de configurations cisco, ou encore de manipulations des médias.\\
+Contrairement au reste du cluster Centres de contact, le projet Pacifica ne s'occupe pas de la partie Genesys. En effet, la filiale possède déjà une équipe travaillant autour de la solution, configurant leurs propres environnements pour les différents sites et opérateurs sous leur responsabilité. Ainsi, ils s'occupent de toute cette partie pouvant aller des règles de routages au management des équipes, tout en passant par les systèmes de monitoring, de configurations Cisco, ou encore de manipulations des médias.\\
 
-Ils possèdent donc de leur coté leur propre environnement Genesys, avec d'autres services et applications, qui nous sont inconnus. Mais les deux applications que nous fournissons doivent tout de même pouvoir s'y intégrer, en leur laissant aussi la possibilité d'en modifier le contenu (changer des formulaires, l'affichage des pages, cacher des fonctionnalités) selon leurs configurations.\\
+Ils possèdent donc de leurs côté leur propre environnement Genesys, avec d'autres services et applications, qui nous sont inconnus. Mais les deux applications que nous fournissons doivent tout de même pouvoir s'y intégrer, en leur laissant aussi la possibilité d'en modifier le contenu (changer des formulaires, l'affichage des pages, cacher des fonctionnalités) selon leur configuration.\\
 Pour cela, le projet possède, pour l'environnement de développement, une panoplie de machines virtuelles sur lesquelles sont installés les différents services nécessaires, ainsi que son propre environnement Genesys parallèle à la production.
 
 De plus, on notera que comme Genesys est utilisé en quelque sorte comme un back-end avec ses API pour en modifier le contenu, faisant tomber Pacifica comme majoritairement un projet de front-end.\\
 
 \subsection{L'application Bandeau}
 
-Le Bandeau Multimédia est la première application du projet Pacifica. Développée et soutenue par Capgemini depuis plus de 10 ans, le Bandeau est un client lourd destiné aux opérateurs d'un centre de contact du groupe d'assurance. Il est installé sur chaque machine et est utilisé comme outil de travail principal des agents. Il leur permet notamment, en suivant la configuration Genesys, de recevoir et traiter des requêtes clients, que ce soit:\\
+Le Bandeau Multimédia est la première application du projet Pacifica. Développé et soutenu par Capgemini depuis plus de 10 ans, le Bandeau est un client lourd destiné aux opérateurs d'un centre de contact du groupe d'assurance. Il est installé sur chaque machine et est utilisé comme outil de travail principal des agents. Il leur permet notamment, en suivant la configuration Genesys, de recevoir et traiter des requêtes clients, que ce soit:\\
 
 \begin{itemize}
 \item Répondre à des appels téléphoniques qui leur ont été désignés par le système de routage.
-\item Accomplir des tâches comme la création de nouveaux contrats d'assurances ou la déclaration d'un sinistre.
-\item Archiver des documents envoyés par le client en base de données, comme par exemple des attestations de résidences.
+\item Accomplir des tâches comme la création de nouveaux contrats d'assurance ou la déclaration d'un sinistre.
+\item Archiver des documents envoyés par le client en base de données, comme par exemple des attestations de résidence.
 \end{itemize}
 
 \subsubsection{Fonctionnalités}
@@ -242,20 +242,20 @@ Le Bandeau Multimédia est la première application du projet Pacifica. Dévelop
 \begin{minipage}{0.65\textwidth}
 Au premier abord, on pourrait s'attendre à un tout petit logiciel. Mais de part son architecture hautement configurable, il cache en réalité un très grand nombre de fonctionnalités selon les métiers de l'agent connecté.\\
 
-Le tout est dans un espace restreint, car le bandeau doit être ouvert continuellement sur le poste de l'agent en restant au premier plan, mais ne pas occuper trop d'espace disponible.  
+Le tout est dans un espace restreint, car le Bandeau doit être ouvert continuellement sur le poste de l'agent en restant au premier plan, mais ne pas occuper trop d'espace disponible.  
 \end{minipage}
 \begin{minipage}{0.25\textwidth}
-\insererfigure{fig/fig4_BMfront.png}{4.5cm}{Le bandeau}{BMFront}\raggedright
+\insererfigure{fig/fig4_BMfront.png}{4.5cm}{Le Bandeau}{BMFront}\raggedright
 \end{minipage}
 \vspace{10mm} %5mm vertical space
 \noindent
 \\
 
-Ainsi, le bandeau est composé de cinq zones principales :
+Ainsi, le Bandeau est composé de cinq zones principales :
 
 \vspace{5mm} %5mm vertical space
 \begin{minipage}{0.25\textwidth}
-\insererfigure{fig/fig5_BMzones.png}{10cm}{Zones du bandeau}{BandeauZones}
+\insererfigure{fig/fig5_BMzones.png}{10cm}{Zones du Bandeau}{BandeauZones}
 \end{minipage}
 \begin{minipage}{0.65\textwidth}
 
@@ -264,14 +264,14 @@ Ainsi, le bandeau est composé de cinq zones principales :
 Cette zone permet de visualiser son mode de réception d’appel, de tâche et de mail en cours, et de le modifier.\\
 
 \item -	Zone 2 : la zone de l’état\\
-La zone 2 peut permettre de visualiser l’état global (voix et acTion), son sous-état en cours, et de les modifier. L'agent peut notamment passer dans un état "Pas libre" pour une pause déjeuner ou une réunion par exemple.\\
+La zone 2 peut permettre de visualiser l’état global (voix et AcTion), son sous-état en cours, et de les modifier. L'agent peut notamment passer dans un état "Pas libre" pour une pause déjeuner ou une réunion par exemple.\\
 
 \item -	Zone 3 : une zone d’informations.\\
 L'arrivée de messages d'information à destination de l'agent est possible grâce à cette zone, comme par exemple la notification d'une nouvelle réunion. \\
 
 \item -	Zone 4 : Onglets\\
-Cette zone contient les deux onglets voix et acTion. 
-Les onglets permettent de visualiser, par un code couleur, l’état du bandeau pour chaque canal et d’accéder aux fonctions pour chaque média.
+Cette zone contient les deux onglets voix et AcTion. 
+Les onglets permettent de visualiser, par un code couleur, l’état du Bandeau pour chaque canal et d’accéder aux fonctions pour chaque média.
 \end{itemize}
 
 \end{minipage}
@@ -295,7 +295,7 @@ Il s'agit d'un téléphone VoIP (Voice over IP) Cisco, et l'utilisateur peut à 
 
 Le second onglet nommé "AcTion" permet de visualiser et traiter les tâches/e-mails distribués par le routage Genesys en fonction de différentes règles de gestion.\\
 
-L'agent peut y rédiger de nouveaux e-mails, créer de nouvelles tâches, et les réaffecter à un tiers. Mais il permet surtout à l'utilisateur d'accéder aux bannettes qui sont les conteneurs principaux pour tous les médias manipulé par ce dernier. \\
+L'agent peut y rédiger de nouveaux e-mails, créer de nouvelles tâches, et les réaffecter à un tiers. Mais il permet surtout à l'utilisateur d'accéder aux bannettes qui sont les conteneurs principaux pour tous les médias manipulés par ce dernier. \\
 Il existe de nombreux types de bannettes configurables, pouvant aller de "ma bannette" pour les tâches et e-mail de l'agent connecté, à la "Bannettes Commune", contenant des actions partagées pour tout le monde. Le tout en passant par des bannettes filtrant un type d'action comme la "Bannette E-mails"\\
 
 
@@ -308,18 +308,18 @@ Dans le cas d'une tâche, l'agent a le même type de fonctionnalités, cependant
 
 \subsubsection{Points techniques}
 
-Le bandeau est développé en C\#, à l'aide du framework .NET 4.7 (Visual 2013 - MSBuild 12.0). Ce choix provient principalement du fait que l'écosystème des solutions chez le client tourne autour des services windows, et qu'une homogénéité était désirée (Webservices hébergés sur windows IIS, authentifications au travers des sessions windows, ...).\\
-Étant un client lourd sur windows, c'est le sous-système graphique Windows Presentation Foundation (WPF) qui est utilisé, avec la librairie Telerik fournissant pour WPF une panoplie de composants graphiques supplémentaires.\\
+Le Bandeau est développé en C\#, à l'aide du framework .NET 4.7 (Visual 2013 - MSBuild 12.0). Ce choix provient principalement du fait que l'écosystème des solutions chez le client tourne autour des services Windows, et qu'une homogénéité était désirée (Webservices hébergés sur Windows IIS, authentifications au travers des sessions Windows, ...).\\
+Étant un client lourd sur Windows, c'est le sous-système graphique Windows Presentation Foundation (WPF) qui est utilisé, avec la librairie Telerik fournissant pour WPF une panoplie de composants graphiques supplémentaires.\\
 
-Bien qu'ayant au fil des années subis des évolutions ici et là, dégradant l'intégrité de son patron de conception, c'est le Model-View-ViewModel (MVVM) qui est ici utilisé. La raison de ce choix est très simple: inventé par Microsoft, le patron MVVM est appliqué par WPF et Silverlight avant lui.\\
+Bien qu'ayant au fil des années subi des évolutions ici et là, dégradant l'intégrité de son patron de conception, c'est le Model-View-ViewModel (MVVM) qui est ici utilisé. La raison de ce choix est très simple: inventé par Microsoft, le patron MVVM est appliqué par WPF et Silverlight avant lui.\\
 
 Pour les autres outils, on retrouve pour la gestion de version un repository Subversion (SVN).\\
 Une plateforme de test HP Application Lifecycle Management (HP AML) pour les tests fonctionnels, et le reporting de defects par le client.\\
 Enfin, pour l'environnement de compilation, un Jenkins est utilisé pour automatiser le build de livraison, tout comme lancer des builds journaliers pour s'assurer de l'intégrité du SVN après les commits de la journée.
 
-\subsection{L'application Ocean}
+\subsection{L'application OCEAN}
 
-Ocean est la deuxième application du projet Pacifica. Développée initialement par une ESN concurrente, elle a été reprise et soutenue par Capgemini depuis un an, suite à une refonte graphique. Ocean est un client léger destiné aux administrateurs d'un centre de contact du groupe d'assurance. Il s'agit d'une Single Web Page Application accessible par un nombre limité de personnes, offrant des outils d'administration fonctionnels et techniques. Chaque métier n'a pas accès au même type d'outils, mais dans sa globalité, ces derniers permettent notamment de:\\
+OCEAN est la deuxième application du projet Pacifica. Développée initialement par une ESN concurrente, elle a été reprise et soutenue par Capgemini depuis un an, suite à une refonte graphique. OCEAN est un client léger destiné aux administrateurs d'un centre de contact du groupe d'assurance. Il s'agit d'une Single Web Page Application accessible par un nombre limité de personnes, offrant des outils d'administration fonctionnels et techniques. Chaque métier n'a pas accès au même type d'outils, mais dans sa globalité, ces derniers permettent notamment de:\\
 
 \begin{itemize}
 \item Configurer des utilisateurs, pour modifier leurs skills, durée de travail, ou autre.
@@ -327,19 +327,19 @@ Ocean est la deuxième application du projet Pacifica. Développée initialement
 \item Configurer l'écosystème Pacifica, que ce soit routage Genesys, répertoires pour le Bandeau, ou autres.
 \item Consulter l'historique des modifications de paramètres.
 \item Programmer des modifications.
-\item Envoyer des Broadcasts sur les bandeaux.
+\item Envoyer des Broadcasts sur les Bandeaux de chaques agents.
 \item Gérer des postes d'un agent (postes téléphoniques, migrations de postes de travail)
 \end{itemize}
 
 \subsubsection{Fonctionnalités}
 
-L'application Ocean est principalement un outil centralisant et simplifiant l'administration d'objets Genesys. Tout comme le bandeau, Ocean possède une architecture hautement configurable, avec des fonctionnalités paramétrables, ou encore accessibles selon les métiers de l’agent connecté. Ainsi, le client peut modifier les labels de l'application, ranger chaque fonctionnalité dans différents groupes et les cacher en fonction des accréditations de l'utilisateur connecté.
+L'application OCEAN est principalement un outil centralisant et simplifiant l'administration d'objets Genesys. Tout comme le Bandeau, OCEAN possède une architecture hautement configurable, avec des fonctionnalités paramétrables, ou encore accessibles selon les métiers de l’agent connecté. Ainsi, le client peut modifier les labels de l'application, ranger chaque fonctionnalité dans différents groupes et les cacher en fonction des accréditations de l'utilisateur connecté.
 
-\insererfigure{fig/fig8_OceanMain.png}{7cm}{Page d'accueil Ocean}{OceanMain}
+\insererfigure{fig/fig8_OceanMain.png}{7cm}{Page d'accueil OCEAN}{OCEANMain}
 
 \begin{minipage}{0.55\textwidth}
 
-La navigation se fait au travers d'un menu déroulant configurable. Ce dernier permet d'accéder à différentes catégories, elles-mêmes supportant plusieurs fonctions. Représentées sous forme d'onglets, ces fonctions sont les éléments constituant la fonctionnalité d'Ocean, et ce sont leurs accès qui sont vérifiés en fonction des compétences de l'utilisateur. Il est donc possible que dans une catégorie regroupant six fonctionnalités, un utilisateur ne soit pas accrédité pour en observer que trois.
+La navigation se fait au travers d'un menu déroulant configurable. Ce dernier permet d'accéder à différentes catégories, elles-mêmes supportant plusieurs fonctions. Représentées sous forme d'onglets, ces fonctions sont les éléments constituant la fonctionnalité d'OCEAN, et ce sont leurs accès qui sont vérifiés en fonction des compétences de l'utilisateur. Il est donc possible que dans une catégorie regroupant six fonctionnalités, un utilisateur ne soit pas accrédité pour en observer que trois.
 
 \end{minipage}
 \begin{minipage}{0.45\textwidth}
@@ -351,7 +351,7 @@ La navigation se fait au travers d'un menu déroulant configurable. Ce dernier p
 
 Chaque onglet contient donc une fonction indépendante de l'application, tenant sur une seule page, et qui doit correspondre à des exigences générales de l'outil. Nous pouvons citer les exemples suivants : gérer les accès concurrents à l'application et ses données critiques, paramétrer des messages et libellés de l'application, respecter les principes ergonomiques mis en place à l'initialisation du projet.\\
 
-A ce jour, l'application Ocean comporte près de vingt-cinq fonctions techniques et/ou fonctionnelles. On peut y retrouver par exemple, rangées par catégories :
+A ce jour, l'application OCEAN comporte près de vingt-cinq fonctions techniques et/ou fonctionnelles. On peut y retrouver par exemple, rangées par catégories :
 
 \vspace{5mm} %5mm vertical space
 \begin{itemize}
@@ -407,20 +407,20 @@ A ce jour, l'application Ocean comporte près de vingt-cinq fonctions techniques
 \end{minipage}
 \end{itemize}
 
-\insererfigure{fig/fig10_OceanFonctions.png}{9cm}{Divers onglets de l'application Ocean}{OceanFonctions}
+\insererfigure{fig/fig10_OceanFonctions.png}{9cm}{Divers onglets de l'application OCEAN}{OCEANFonctions}
 
 \subsubsection{Points techniques}
 
-Ocean est développée en C\#, à l'aide du framework .NET 4.7 (Visual 2015 - MSBuild 14.0). Ce choix provenant principalement du fait que l'écosystème des solutions chez le client tourne autour des services windows, et qu'une homogénéité était désirée (Webservices hébergé sur windows IIS, authentifications au travers des sessions windows, ...).\\
+OCEAN est développée en C\#, à l'aide du framework .NET 4.7 (Visual 2015 - MSBuild 14.0). Ce choix provenant principalement du fait que l'écosystème des solutions chez le client tourne autour des services Windows, et qu'une homogénéité était désirée (Webservices hébergé sur Windows IIS, authentifications au travers des sessions Windows, ...).\\
 Étant un client léger web, c'est le framework ASP.NET MVC (basé sur ASP.NET) qui est utilisé, avec la librairie Telerik fournissant une panoplie de composants graphiques supplémentaires.\\
 
-En plus d'utiliser les API de l'environnement Genesys pour manipuler les paramètres ou objets de la solution, Ocean utilise d'autres services. Il implémente par exemple l'API AXL pour l'interfaçage cisco, les services de l'environnement windows pour les traitements en différé, ou encore directement un service du Bandeau pour l'envoie de broadcast aux agents d'un site.\\
+En plus d'utiliser les API de l'environnement Genesys pour manipuler les paramètres ou objets de la solution, OCEAN utilise d'autres services. Il implémente par exemple l'API AXL pour l'interfaçage Cisco, les services de l'environnement Windows pour les traitements en différé, ou encore directement un service du Bandeau pour l'envoi de broadcast aux agents d'un site.\\
 
 Le projet a initialement été développé par une autre ESN concurrente sous le framework Silverlight aujourd'hui obsolète. Capgemini a été contractée pour créer une refonte globale de l'application, reprenant ainsi la logique des services développés par l'ESN concurrente, et recréer intégralement la partie client de l'application.\\
-Pour cela, un nouveau patron de conception est utilisé: le Model-View-Controller (MVC). De plus, plusieurs couches applicatives ont été désignées dont les plus importantes sont:\\
+Pour cela, un nouveau patron de conception est utilisé: le Model-View-Controller (MVC). De plus, plusieurs couches applicatives ont été désignées dont les plus importantes sont :\\
 
 \begin{minipage}{0.35\textwidth}
-\insererfigure{fig/fig11_OceanModuleArchi.png}{3cm}{Modules}{OceanModuleArchi}
+\insererfigure{fig/fig11_OceanModuleArchi.png}{3cm}{Modules}{OCEANModuleArchi}
 \end{minipage}
 \begin{minipage}{0.55\textwidth}
 La couche client comportant les modules où sont rédigées les fonctions de l'application, regroupées dans des projets C\# qui sont rangés par similarités. Par exemple, les fonctionnalités "Configuration Utilisateurs", "Visualisation Utilisateurs" et "Absences" sont toutes regroupées sous un même projet "Utilisateur".
@@ -428,10 +428,10 @@ La couche client comportant les modules où sont rédigées les fonctions de l'a
 \vspace{5mm} %5mm vertical space
 
 \begin{minipage}{0.35\textwidth}
-\insererfigure{fig/fig12_OceanWebservicesArchi.png}{3cm}{WebServices}{OceanWebservicesArchi}
+\insererfigure{fig/fig12_OceanWebservicesArchi.png}{3cm}{WebServices}{OCEANWebservicesArchi}
 \end{minipage}
 \begin{minipage}{0.55\textwidth}
-La couche WebService comporte à la fois la logique anciennement développée et la nouvelle, découpée dans 4 étapes. La partie "Service" qui joue le rôle d'API, représentant la façade des divers appels possibles. "Rules" où est rédigé la logique d'un appel au web service. Et enfin les couches "DAL" et "BO" appliquant les modifications au travers d'appels simples vers les API externes.
+La couche WebService comporte à la fois la logique anciennement développée et la nouvelle, découpée dans 4 étapes. La partie "Service" qui joue le rôle d'API, représentant la façade des divers appels possibles. "Rules" où est rédigée la logique d'un appel au web service. Et enfin les couches "DAL" et "BO" appliquant les modifications au travers d'appels simples vers les API externes.
 \end{minipage}
 \vspace{5mm} %5mm vertical space
 \\
@@ -448,25 +448,25 @@ Développé en C\# avec le framework .NET, ces deux applications peuvent être v
 
 \insererfigure{fig/fig13_PacificaApplications.png}{7cm}{Applications du projet Pacifica}{PacificaApplications}
 
-On retrouve le bandeau, client lourd installé sur la machine de tout les opérateurs, leur fournissant les requêtes clients routées par la solution Genesys qu'ils doivent traiter. Ces dernières peuvent prendre la forme d'appels entrants ou encore d'e-mails.\\
+On retrouve le Bandeau, client lourd installé sur la machine de tous les opérateurs, leur fournissant les requêtes clients routées par la solution Genesys qu'ils doivent traiter. Ces dernières peuvent prendre la forme d'appels entrants ou encore d'e-mails.\\
 
-La seconde application, nommée Ocean est un client léger web sur lequel les administrateurs d'un centre de contact peuvent manipuler une partie de paramétrage Genesys de façon sécurisée et simplifiée.
+La seconde application, nommée OCEAN est un client léger web sur lequel les administrateurs d'un centre de contact peuvent manipuler une partie de paramétrage Genesys de façon sécurisée et simplifiée.
 
 \newpage
 
 %---------------- Chapter 4 -------------------
 \section{Cadre de stage}
 
-Je vais ici parler de l'environnement dans lequel j'ai pratiqué mon stage autour de la problématique de centre de contact.
-Dans un premier temps, je parlerai de l'équipe, avec les rôles de chaque collaborateurs. Puis, je poursuivrai sur le projet, son but, son histoire, ainsi que quelques précisions techniques.
+Je vais ici parler de l'environnement dans lequel j'ai pratiqué mon stage autour de la problématique de centres de contact.
+Dans un premier temps, je parlerai de l'équipe, avec les rôles de chaque collaborateur. Puis, je poursuivrai sur le projet, son but, son histoire, ainsi que quelques précisions techniques.
 
 \subsection{Environnement}
 
-Pour ce stage, j'ai donc intégré la "people unit" CSD (Custom Software Developpement). Cette dernière a pour directive principale la réalisation d'applications/solutions customisées pour ses clients.\\
+Pour ce stage, j'ai donc intégré la Practice CSD (Custom Software Developpement). Cette dernière a pour directive principale la réalisation d'applications/solutions personnalisées pour ses clients.\\
 
-Au sein de ce groupe, je me suis retrouvé dans le "cluster CTI", un open space regroupant les experts centres de contact de Capgemini Rennes. Il se constitue d'une douzaine de collaborateurs avec des profils divers, s'occupant de la réalisation et du paramétrage d'outils pour ses clients nécessitant la mise en place d'un centre de contact.\\
+Au sein de ce groupe, je me suis retrouvé dans le "cluster Centres de Contact", un open space regroupant les experts centres de contact de Capgemini Rennes. Il se constitue d'une douzaine de collaborateurs avec des profils divers, s'occupant de la réalisation et du paramétrage d'outils pour ses clients nécessitant la mise en place d'un centre de contact.\\
 
-Dans ce cluster j'ai ainsi rejoins une petite équipe de développeurs travaillant pour un grand groupe de services d’assurances pour particuliers Français. Cette équipe, tout comme le cluster en général, a connu dans le passé un taux d'activité bien plus important, entraînant en partie une diminution drastique de ses effectifs ces derniers mois.
+Dans ce cluster j'ai ainsi rejoint une petite équipe de développeurs travaillant pour un grand groupe de services d’assurances pour particuliers Français. Cette équipe, tout comme le cluster en général, a connu dans le passé un taux d'activité bien plus important, entraînant en partie une diminution drastique de ses effectifs ces derniers mois.
 
 \subsection{L'équipe}
 
@@ -474,37 +474,37 @@ Constituée initialement de cinq collaborateurs, l'équipe travaillant sur Pacif
 On y retrouve:\\
 
 \begin{itemize}
-  \item Ophélie GAUTIER, Engagement Manager (EM) de grade C. Elle supervise et orchestre les actions de chacun sur le projet Pacifica, ainsi que d'autres projets du cluster Centre de contact (CTI). Elle est ma tutrice de stage, et elle s'est assurée de mon intégration au projet ces six dernier mois.\\
+  \item Ophélie GAUTIER, Engagement Manager (EM) de grade C. Elle supervise et orchestre les actions de chacun sur le projet Pacifica, ainsi que d'autres projets du cluster Centre de contact. Elle est ma tutrice de stage, et elle s'est assurée de mon intégration au projet ces six derniers mois.\\
   
-  \item Matthias MUSSHE, initialement responsable technique du projet Pacifica, ingénieur logiciel de grade B avant de quitter le groupe Capgemini un mois après mon arrivée. Il m'a notamment aider à comprendre et configurer le pro-logiciel Genesys, pour le bon fonctionnement de mon environnement de développement.\\
+  \item Matthias MUSSHE, initialement responsable technique du projet Pacifica, ingénieur logiciel de grade B avant de quitter le groupe Capgemini un mois après mon arrivée. Il m'a notamment aidé à comprendre et configurer le pro-logiciel Genesys, pour le bon fonctionnement de mon environnement de développement.\\
   
-  \item Mohammed HAMMAMI, Ingénieur Logiciel de grade B, architecte de l'application Ocean du projet Pacifica. A encadré mes actions sur Ocean, validant mon travail comme conforme à l'architecture de cette dernière. Quittera le projet mi-juillet, ne laissant plus qu'un ingénieur sur Pacifica.\\
+  \item Mohammed HAMMAMI, Responsable technique de grade B, architecte de l'application OCEAN du projet Pacifica. A encadré mes actions sur OCEAN, validant mon travail comme conforme à l'architecture de cette dernière. Quittera le projet mi-juillet, ne laissant plus qu'un ingénieur sur Pacifica.\\
   
   \item Bastien CLOAREC, Ingénieur Logiciel de grade B, devenu responsable technique du projet Pacifica, il travaille notamment plus sur l'application Bandeau du projet Pacifica. Ainsi, il m'a fait découvrir l'architecture de cette application, et m'a orienté pour mes actions sur cette dernière.\\
   
 \end{itemize}
 
 \subsection{Travail en équipe}
-Capgemini possède des règles pour le travail en équipe sur le site. Chaque collaborateur a le statut de cadre, cela signifie qu'il n'y a pas de comptage d'heures, juste une plage allant de 36 à 39 heures. Il existe cependant tout de même une plage horaire où la présence de chacun est attendue (9h15 -17h30).\\
+Capgemini possède des règles générales pour le travail en équipe sur le site. Chaque collaborateur ayant en majorité le statut de cadre, cela signifie qu'il n'y a pas de comptage d'heures, juste une plage allant de 36 à 39 heures. Il existe cependant tout de même une plage horaire où la présence de chacun est attendue (9h15 -17h30).\\
 
-Chaque matin, les équipes doivent se réunir pour un DSTUM (Daily STand Up Meeting) , une courte réunion à heure fixe (celle pour mon projet était à 9:15). Elle a pour but de se mettre à jour sur les informations générales du projet, des avancées ou retards que chaque collaborateur peuvent rencontrer, et mettre au point les actions faites le jour précédent et à venir. Cela permet d'avoir une vue globale de l'avancée du projet, ce qui semble primordial dans le cas d'un travail d'équipe.\\
+Chaque matin, les équipes se réunissent pour un DSTUM (Daily STand Up Meeting), une courte réunion à heure fixe (celle pour mon projet était à 9:15). Elle a pour but de se mettre à jour sur les informations générales du projet, des avancées ou retards que chaque collaborateur peut rencontrer, et mettre au point les actions faites le jour précédent et à venir. Cela permet d'avoir une vue globale de l'avancée du projet, ce qui semble primordial dans le cas d'un travail d'équipe.\\
 
-Capgemini promouvoit l'utilisation de la méthode de Lean pour le développement et l'industrialisation de ses projets. Cependant, le choix de ce type de méthodes dépend du sujet et du client.\\ 
-Dans notre cas, les responsables groupe d'assurance désiraient s'impliquer un minimum dans la vie de développement des évolutions qu'ils commandent. Ainsi, les méthodes agiles à la mode de nos jours n'ont pas été envisagées.\\
+Capgemini promeut l'utilisation de la méthode de Lean pour le développement et l'industrialisation de ses projets. Cependant, le choix de ce type de méthodes dépend du sujet et du client.\\ 
+Dans notre cas, les responsables groupe d'assurance ne désiraient s'impliquer qu'un minimum dans la vie de développement des évolutions qu'ils commandent. Ainsi, les méthodes agiles à la mode de nos jours n'ont pas été envisagées.\\
 
-Ainsi, c'est le développement en V qui a été sélectionné, sur les différentes d'évolutions commandées par le client.\\
+Ainsi, c'est le développement en V qui a été sélectionné, sur les différentes évolutions commandées par le client.\\
 
 
-Toute évolution commence avec une Expression de Besoin (EB) rédigée par le client, suivie d'une proposition commerciale (PROPAL). Notre réponse est donnée après étude des besoins et estimation des charges de travail. Si cette évaluation du chiffrage convient au client, le projet démarre comme informé ci-dessous.
+Toute évolution commence avec une Expression de Besoin (EB) rédigée par le client, suivie d'une proposition commerciale (PROPAL). Notre réponse est donnée après étude des besoins et estimation des charges de travail. Si cette évaluation du chiffrage convient au client, le projet démarre de la façon suivante:
 
 \insererfigure{fig/fig2_PhasesProjet.png}{5cm}{Cycle du projet pour une évolution.}{Cycle de vie}
 
-Malgré le fait qu'il s'agisse d'un développement en V ou normalement le client est exclut du processus de développement. Dans le cas de ce projet, des réunions hebdomadaires sont organisées, afin faire le point sur les problèmes globaux, les timelines, ainsi que l'assurance des actions de chaque acteur du projet.
+Malgré le fait qu'il s'agisse d'un développement en V où normalement le client est exclu du processus de développement. Dans le cas de ce projet, des réunions hebdomadaires sont organisées, afin de faire le point sur les problèmes globaux, les timelines, ainsi que l'assurance des actions de chaque acteur du projet.
 
 \subsection*{Conclusion}
 
-Le projet Pacifica est considéré comme un petit projet, avec une poignée de développeurs.\\
-A ses débuts, l'activité était bien plus importante avec davantage d'ingénieurs. Cependant, étant un projet en développement en V dépendant des expressions de besoins du client, il connaît des périodes d'activité réduite justifiant parfois la diminution d'effectifs.\\
+Le projet Pacifica est considéré comme un petit projet avec uniquement une poignée de développeurs. Il a connu cependant des degrés d'activité bien plus importante avec davantage d'ingénieurs dans le passé. \\
+En effet, étant un projet en développement en V dépendant des expressions de besoins du client, c'est donc un projet qui connaît des creux d'activité lorsque aucunes amélioration est demandée. De telles périodes d'activité justifiant ainsi parfois la diminution d'effectifs.\\
 
 
 \newpage
@@ -527,13 +527,13 @@ Par ordre catégories, je vais maintenant décrire mes tâches accomplies durant
 \newpage
 \subsection{Découverte du projet}
 
-A mon arrivée sur le projet, je devais d'abord m'installer avec le PC qui m'a été fourni. Il s'agissait d'installer les deux environnements de développement pour le bandeau est Ocean.\\
-Pour cela des documents d'installation étaient rédigées pour informer des outils et configurations nécessaires pour chaque écosystème. Bien que parfois obsolète ou obscure, Matthias a été présent pour m'aider.\\
+A mon arrivée sur le projet, je devais d'abord m'installer avec le PC qui m'a été fourni. Il s'agissait d'installer les deux environnements de développement pour le Bandeau est OCEAN.\\
+Pour cela, des documents d'installation étaient rédigés pour informer des outils et configurations nécessaires pour chaque écosystème. Bien que parfois obsolète ou obscure, Matthias a été présent pour m'aider.\\
 
 Au terme de cette installation, je me suis retrouvé avec les outils suivant:\\
 
 \begin{itemize}
-  \item Visual Studio 2013 et 2015, les IDE (environnement de développement intégré) des projet Bandeau et Ocean respectivement. Ils supportent chacun la version MSBuild et .NET nécessaire pour leurs propre projets, avec divers plugins:
+  \item Visual Studio 2013 et 2015, les IDE (environnement de développement intégré) des projets Bandeau et OCEAN respectivement. Ils supportent chacun la version MSBuild et .NET nécessaire pour leurs propre projets, avec divers plugins:
   
     \begin{itemize}
         \item AnkhSVN, pour accéder au repository distant SVN directement depuis l'IDE
@@ -545,7 +545,7 @@ Au terme de cette installation, je me suis retrouvé avec les outils suivant:\\
 
   \item TortoiseSVN pour accéder au repository distant SVN indépendemment.
   
-  \item Cisco IP Communicator avec PhonerLite pour simuler le téléphone d'un agent sur le bandeau.
+  \item Cisco IP Communicator avec PhonerLite pour simuler le téléphone d'un agent sur le Bandeau.
   
   \item Genesys configuration Manager (CME)
   
@@ -553,32 +553,32 @@ Au terme de cette installation, je me suis retrouvé avec les outils suivant:\\
   
 \end{itemize}
 
-Ainsi que mon propre profil configuré genesys et cisco, pour interagir avec les deux solutions du projet comme un véritable utilisateur, avec ses propres compétences et accès paramétrables.\\
+Ainsi que mon propre profil configuré genesys et Cisco, pour interagir avec les deux solutions du projet comme un véritable utilisateur, avec ses propres compétences et accès paramétrables.\\
 
 Cette période a aussi été pour moi l'occasion de découvrir l'environnement .NET que je ne connaissais pas, en parcourant les différentes documentations ou suivant des tutoriels explicatifs disponibles sur le net. Je me suis focalisé sur les framework que j'utiliserais, à savoir ASP.NET MVC et WPF.\\
-Tout comme parcourir les documentations fonctionnelles, administratives et d'architectures des deux applications Bandeau et Ocean pour en comprendre le comportement et les enjeux.\\
+Tout comme parcourir les documentations fonctionnelles, administratives et d'architectures des deux applications Bandeau et OCEAN pour en comprendre le comportement et les enjeux.\\
 
 Ces premières semaines m'ont permis de rencontrer à nouveau les différents acteurs chez Capgemini: le CE, les Ressources Humaines et Ressources Managers.\\ 
 
 \newpage
 \subsection{Evolution WFM pour OCEAN}
 
-Cette évolution consistait à créer une fonctionnalité dans l'application Ocean, pour accueillir une nouvelle solution pour le centre de contact de l'assureur: \\
-la solution Work Force Management (WFM) de la suite genesys, qui offre la possibilité de générer des emplois du temps optimaux pour les agents d'un centre de contact, tout en considérant les contraintes des employés et les prédictions de l'affluence de la clientèle.\\
+Cette évolution consistait à créer une fonctionnalité dans l'application OCEAN, pour accueillir une nouvelle solution pour le centre de contact de l'assureur: \\
+La solution Work Force Management (WFM) de la suite genesys, qui offre la possibilité de générer des emplois du temps optimaux pour les agents d'un centre de contact, tout en considérant les contraintes des employés et les prédictions de l'affluence de la clientèle.\\
 
-Ne possédant pas la connaissance des contraintes d'emploi du temps d'un agent de centre de contact, le client a décidé de faire appel à une entreprise tierce spécialisée dans la configuration de ce type de solutions. Ils ont été ainsi demandé d'installer l'environnement WFM chez pacifica, et de fournir un webservice permettant le lancement de deux types de planification WFM:
+Ne possédant pas la connaissance des contraintes d'emploi du temps d'un agent de centre de contact, le client a décidé de faire appel à une entreprise tierce spécialisée dans la configuration de ce type de solutions. Ils ont été ainsi demandés d'installer l'environnement WFM chez pacifica, et de fournir un webservice permettant le lancement de deux types de planification WFM:
 \begin{itemize}
   \item Planification Horaire
   \item Planification Session
 \end{itemize}
 
-Ocean devra alors implémenter ce webservice, pour permettre aux administrateurs de lancer chacune de ces planifications au sein de nouveaux onglets.\\
+OCEAN devra alors implémenter ce webservice, pour permettre aux administrateurs de lancer chacune de ces planifications au sein de nouveaux onglets.\\
 
-Un gros soucis a émergé cependant lors de la réalisation que l'entreprise contractée par le client, n'avait pas un corps de métier pour le développement. Résultant en un webservice plus que questionnable, que Capgemini devait implémenter dans sa solution, et en fournir le support ensuite.
+Un gros souci a émergé cependant lors de la réalisation que l'entreprise contractée par le client, n'avait pas un corps de métier pour le développement. Résultant en un webservice plus que questionnable, que Capgemini devait implémenter dans sa solution, et en fournir le support ensuite.
 
 \subsubsection{Préparation de l'évolution}
 
-Dès mon arrivée, une première expression de besoin pour cette évolution d'Ocean venait d'être traitée. Elle ne traitait pour le moment que de l'instauration de la planification horaire a l'outil OCEAN. La seconde planification (planification session) devait arriver par la suite. Ainsi, l'équipe a rédigé une proposition commerciale pour client comportant un chiffrage de cette action.\\
+Dès mon arrivée, une première expression de besoin pour cette évolution d'OCEAN venait d'être traitée. Elle ne traitait pour le moment que de l'instauration de la planification horaire à l'outil OCEAN. La seconde planification (planification session) devait arriver par la suite. Ainsi, l'équipe a rédigé une proposition commerciale pour client comportant un chiffrage de cette action.\\
 En attente d'une réponse et le projet étant occupé sur d'autres évolutions, j'ai été mis à contribution pour la préparation de l'arrivée de cette nouvelle fonctionnalité. J'ai donc dû instaurer le squelette de cette dernière au sein de l'architecture de l'application.\\
 
 \begin{minipage}{0.35\textwidth}
@@ -593,7 +593,7 @@ Cette interface se devait d'être configurable depuis le configuration manager (
 \vspace{5mm} %5mm vertical space
 
 Une particularité de cette fonction existe cependant: comme le reste des modules, uniquement certains types d'administrateurs sur OCEAN peuvent avoir accès à la planification horaire, mais ici son fonctionnement change par la même occasion selon les accréditations de l'utilisateur.\\
-Ainsi, deux types de personnes ont accès à cet onglet que sont les DSI et les UGS (termes métier):\\
+Ainsi, deux types de personnes ont accès à cet onglet que sont les DSI et les UGS (termes métiers):\\
 
 L'administrateur DSI, considéré comme supérieur dans les autorisations, a le droit à davantage de fonctionnalités:\\
 \includegraphics[width=.95\textwidth]{fig/fig18_PlanoHDSIFonct.png}
@@ -624,7 +624,7 @@ Cette période de mon stage, bien qu'exténuante, m'a entraîné dans la reprise
 Une fois la documentation et le nettoyage d'une majorité des codes smells faite avec Mohammed HAMMAMI, nous nous sommes lancés dans le découpage des quatre méthodes du WebService afin de les intégrer à l'architecture des services OCEAN. 
 
 \begin{minipage}{0.35\textwidth}
-\insererfigure{fig/fig12_OceanWebservicesArchi.png}{3cm}{WebServices}{OceanWebservicesArchibis}
+\insererfigure{fig/fig12_OceanWebservicesArchi.png}{3cm}{WebServices}{OCEANWebservicesArchibis}
 \end{minipage}
 \begin{minipage}{0.55\textwidth}
 Séparé de telle façon que la façade du webservice soit située dans "Service" afin de jouer le rôle d'API. La logique métier dans "Rules", les appels minimaux vers la solution WFM Genesys dans la section "DAL" et "BO" pour les données et paramètres manipulés.
@@ -636,7 +636,7 @@ Cela a été pour moi l'occasion de pratiquer sur une partie encore quelque peu 
 
 \subsubsection{Connections WFM au Front-End}
 
-Une fois le webservice entièrement intégré et fonctionnel, il ne restait plus qu'a connecté les appels à mon Interface Homme Machine (IHM) au travers de la référence du service WFM maintenant créée, tout en s'assurant du bon fonctionnement des requêtes AJAX envoyées par le javascript.\\
+Une fois le webservice entièrement intégré et fonctionnel, il ne restait plus qu'à connecter les appels à mon Interface Homme Machine (IHM) au travers de la référence du service WFM maintenant créée, tout en s'assurant du bon fonctionnement des requêtes AJAX envoyées par le javascript.\\
 
 Mon code arrivant à sa finalisation, l'heure est venue de le faire réviser par une personne avec davantage d'expérience. Ainsi Mohammed HAMMAMI, architecte d'OCEAN, a pu me donner des points d'amélioration ainsi que divers conseils comme l'utilisation de certains composants existant dans la solution pour améliorer l'expérience utilisateur. Cela a permis quelques améliorations de ma part sur mon interface.\\
 
@@ -661,7 +661,7 @@ Finalisant les tâches de développement pour la fonction de planification horai
 \subsubsection{Tests WFM}
 
 Jusqu'ici, afin de s'assurer du bon fonctionnement du webservice, nous nous sommes assuré de la génération de tables de planification dans l'outil WFM de Genesys après que le webservice soit appelé.\\
-Il nous fallait cependant tester l'intégrité du webservice une fois optimisé et découpé dans notre solution, afin de s'assurer de son bon fonctionnement. De par la nature possiblement imprévisible de la planification Genesys, il nous était impossible de tester le résultat de cette dernière en comparant tout simplement la planification du webservice originel à la notre.\\
+Il nous fallait cependant tester l'intégrité du webservice une fois optimisé et découpé dans notre solution, afin de s'assurer de son bon fonctionnement. De par la nature possiblement imprévisible de la planification Genesys, il nous était impossible de tester le résultat de cette dernière en comparant tout simplement la planification du webservice originel à la ntre.\\
 
 Il s'agissait ici d'un point critique de la reprise du webservice:\\
 nous ne pouvions laisser le webservice en l'état à sa réception, mais l'industrialiser risquait d'impacter la logique de ce dernier.\\
@@ -709,7 +709,7 @@ Au terme de cette période, l'évolution fût envoyée chez le client, terminant
 \newpage
 \subsection{Évolution des Documents dans les AcTions pour le Bandeau}
 
-Dans le bandeau, deux types d' AcTions existent dans la bannette d'un utilisateur: on y retrouve les e-mails et les tâches.\\
+Dans le Bandeau, deux types d' AcTions existent dans la bannette d'un utilisateur: on y retrouve les e-mails et les tâches.\\
 Avant cette évolution, seul les e-mails pouvaient posséder des documents joints sous la forme suivante:
 
 \insererfigure{fig/fig23_PJEmail.png}{5cm}{Modèle de consultation d'un email}{PJEmails}
@@ -720,7 +720,7 @@ L'idée de cette évolution est de rajouter dans les tâches un composant sembla
 
 Bastien CLOAREC s'occupait de modifier le service iWD (un sous-système permettant notamment la création de tâches) afin qu'il supporte des documents joints. Je me suis mis en renfort sur cette évolution afin de rajouter un nouveau composant pour les tâches, permettant d'afficher ces pièces jointes.\\
 
-Une tâche sur le bandeau est modélisée comme un formulaire que l'opérateur remplit. Cependant, chaque tâche est différente et répond à des problématiques métiers différentes. C'est pourquoi leur interface est hautement configurable au sein du Configuration Manager (CME), où il est possible de créer une interface entièrement personnalisée pour une nouvelle tâche, en déclarant pour chaque ligne quels composant ont y retrouve et sa localisation.
+Une tâche sur le Bandeau est modélisée comme un formulaire que l'opérateur remplit. Cependant, chaque tâche est différente et répond à des problématiques métiers différentes. C'est pourquoi leur interface est hautement configurable au sein du Configuration Manager (CME), où il est possible de créer une interface entièrement personnalisée pour une nouvelle tâche, en déclarant pour chaque ligne quels composant ont y retrouve et sa localisation.
 
 \insererfigure{fig/fig24_IHMTache.png}{6cm}{Configuration de la première ligne d'une tâche de déclaration d'Iphone}{IHMTache}
 
