@@ -40,7 +40,7 @@
 \lhead{\includegraphics[scale=0.5]{logos/logo_Rennes1Cap.png}} %Affichage de l'image au top de la page
 \rhead{\nouppercase{\leftmark}}
 \rfoot{\thepage}
-\cfoot{Rapport - \textbf{\titre}}
+\cfoot{\textbf{\titre}}
 \lfoot{\UE}
 }
 
