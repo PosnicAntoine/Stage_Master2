@@ -527,13 +527,13 @@ Par ordre catégories, je vais maintenant décrire mes tâches accomplies durant
 \newpage
 \subsection{Découverte du projet}
 
-A mon arrivée sur le projet, je devais d'abord m'installer avec le PC qui m'a été fourni. Il s'agissait d'installer les deux environnements de développement pour le Bandeau est OCEAN.\\
-Pour cela, des documents d'installation étaient rédigés pour informer des outils et configurations nécessaires pour chaque écosystème. Bien que parfois obsolète ou obscure, Matthias a été présent pour m'aider.\\
+A mon arrivée sur le projet, je devais d'abord m'installer avec le PC qui m'a été fourni. Il s'agissait d'installer les deux environnements de développement pour le Bandeau et OCEAN.\\
+Pour cela, des documents d'installation étaient rédigés pour informer des outils et configurations nécessaires pour chaque écosystème, bien que parfois obsolète ou obscure. C'est pourquoi Matthias a été présent pour m'assister lors de cette étape.\\
 
-Au terme de cette installation, je me suis retrouvé avec les outils suivant:\\
+Ci-dessous, la liste des outils installés sur mon poste:
 
 \begin{itemize}
-  \item Visual Studio 2013 et 2015, les IDE (environnement de développement intégré) des projets Bandeau et OCEAN respectivement. Ils supportent chacun la version MSBuild et .NET nécessaire pour leurs propre projets, avec divers plugins:
+  \item Visual Studio 2013 et 2015, les IDE (environnement de développement intégré) des projets Bandeau et OCEAN respectivement. Ils supportent chacun la version MSBuild et .NET nécessaire pour leurs propres projets, avec divers plugins:
   
     \begin{itemize}
         \item AnkhSVN, pour accéder au repository distant SVN directement depuis l'IDE
@@ -555,8 +555,7 @@ Au terme de cette installation, je me suis retrouvé avec les outils suivant:\\
 
 Ainsi que mon propre profil configuré genesys et Cisco, pour interagir avec les deux solutions du projet comme un véritable utilisateur, avec ses propres compétences et accès paramétrables.\\
 
-Cette période a aussi été pour moi l'occasion de découvrir l'environnement .NET que je ne connaissais pas, en parcourant les différentes documentations ou suivant des tutoriels explicatifs disponibles sur le net. Je me suis focalisé sur les framework que j'utiliserais, à savoir ASP.NET MVC et WPF.\\
-Tout comme parcourir les documentations fonctionnelles, administratives et d'architectures des deux applications Bandeau et OCEAN pour en comprendre le comportement et les enjeux.\\
+Cette période a aussi été pour moi l'occasion de découvrir l'environnement .NET que je ne connaissais pas, en parcourant les différentes documentations ou suivant des tutoriels explicatifs disponibles sur internet. Je me suis ainsi focalisé sur les frameworks que j'utiliserais, à savoir ASP.NET MVC et WPF. J'ai aussi pu parcourir les documentations fonctionnelles, administratives et d'architectures des deux applications Bandeau et OCEAN pour en comprendre le comportement et les enjeux.\\
 
 Ces premières semaines m'ont permis de rencontrer à nouveau les différents acteurs chez Capgemini: le CE, les Ressources Humaines et Ressources Managers.\\ 
 
@@ -564,31 +563,31 @@ Ces premières semaines m'ont permis de rencontrer à nouveau les différents ac
 \subsection{Evolution WFM pour OCEAN}
 
 Cette évolution consistait à créer une fonctionnalité dans l'application OCEAN, pour accueillir une nouvelle solution pour le centre de contact de l'assureur: \\
-La solution Work Force Management (WFM) de la suite genesys, qui offre la possibilité de générer des emplois du temps optimaux pour les agents d'un centre de contact, tout en considérant les contraintes des employés et les prédictions de l'affluence de la clientèle.\\
+La solution Work Force Management (WFM) de la suite Genesys, qui offre la possibilité de générer des emplois du temps optimaux pour les agents d'un centre de contact, tout en considérant les contraintes des employés et les prédictions de l'affluence de la clientèle.\\
 
-Ne possédant pas la connaissance des contraintes d'emploi du temps d'un agent de centre de contact, le client a décidé de faire appel à une entreprise tierce spécialisée dans la configuration de ce type de solutions. Ils ont été ainsi demandés d'installer l'environnement WFM chez pacifica, et de fournir un webservice permettant le lancement de deux types de planification WFM:
+Ne possédant pas la connaissance des contraintes d'emploi du temps d'un agent de centre de contact, le client a décidé de faire appel à une entreprise tierce spécialisée dans la configuration de ce type de solutions. Ils ont donc installé l'environnement WFM chez le client, et développé un webservice permettant le lancement de deux types de planification WFM:
 \begin{itemize}
   \item Planification Horaire
   \item Planification Session
 \end{itemize}
 
-OCEAN devra alors implémenter ce webservice, pour permettre aux administrateurs de lancer chacune de ces planifications au sein de nouveaux onglets.\\
+Le client demanda ensuite l'implémentation de ce webservice dans OCEAN, pour permettre aux administrateurs de lancer chacune de ces planifications au sein de nouveaux onglets.\\
 
-Un gros souci a émergé cependant lors de la réalisation que l'entreprise contractée par le client, n'avait pas un corps de métier pour le développement. Résultant en un webservice plus que questionnable, que Capgemini devait implémenter dans sa solution, et en fournir le support ensuite.
+Un gros souci émergea cependant lorsque nous avons réalisé que l'entreprise contractée par le client n'était pas spécialisée dans le développement. Résultat, nous avons obtenu un webservice de très mauvaise qualité, que nous devions implémenter dans notre solution.
 
 \subsubsection{Préparation de l'évolution}
 
 Dès mon arrivée, une première expression de besoin pour cette évolution d'OCEAN venait d'être traitée. Elle ne traitait pour le moment que de l'instauration de la planification horaire à l'outil OCEAN. La seconde planification (planification session) devait arriver par la suite. Ainsi, l'équipe a rédigé une proposition commerciale pour client comportant un chiffrage de cette action.\\
-En attente d'une réponse et le projet étant occupé sur d'autres évolutions, j'ai été mis à contribution pour la préparation de l'arrivée de cette nouvelle fonctionnalité. J'ai donc dû instaurer le squelette de cette dernière au sein de l'architecture de l'application.\\
+Par anticipation, j'ai reçu la consigne de préparer l'arrivée de cette nouvelle fonctionnalité. J'ai donc dû instaurer le squelette de cette dernière au sein de l'architecture de l'application.\\
 
 \begin{minipage}{0.35\textwidth}
 \insererfigure{fig/fig15_WFMArchitecture.png}{7cm}{Architecture du module Planification}{WFMModuleArchi}
 \end{minipage}
 \begin{minipage}{0.55\textwidth}
 Je me suis donc lancé dans la réalisation d'un nouveau module dans la couche client d'OCEAN, qui comportera les fonctions pour les deux types de planifications.\\
-Me référant aux maquettes proposées lors de l'expression de besoins, ainsi que la structure globale de l'application; j'ai ensuite créé la nouvelle fonction pour la planification horaire. L'idée était d'avoir une interface homme-machine fonctionnelle, en attendant la livraison du webservice.\\
+Me référant aux maquettes proposées lors de l'expression de besoins, ainsi que la structure globale de l'application; j'ai ensuite créé la nouvelle fonction pour la planification horaire, l'idée étant d'avoir une interface homme-machine fonctionnelle, en attendant la livraison du webservice.\\
 
-Cette interface se devait d'être configurable depuis le configuration manager (CME) pour des modifications fonctionnelles, ainsi que des fichiers ressources pour tout les labels de la page.
+Cette interface se devait d'être configurable depuis le configuration manager (CME) pour des modifications fonctionnelles, ainsi que des fichiers ressources pour tous les labels de la page.
 \end{minipage}
 \vspace{5mm} %5mm vertical space
 
@@ -608,11 +607,11 @@ Elle m'a aussi permis de découvrir de façon concrète l'architecture et les do
 
 \subsubsection{Industrialisation du WebService WFM}
 
-Dès lors que nous avons reçu les sources du webservice, nous avons pu constater les soucis qui allaient nous être posé. Résultat d'une année entière de développement par des personnes qui ne sont pas développeurs, il s'agissait d'un unique fichier C\# de sept mille lignes, mélangeant paramètres, données, logique métier, WebMethods ou encore classes d'objets. Le tout avec des fonctions pouvant aller jusqu'au millier de lignes, des signatures de plus de vingt paramètres, des cascades de conditionnelles imbriquées et aucune documentation.\\
+Dès lors que nous avons reçu les sources du webservice, nous avons pu constater les soucis qui allaient nous être posés. Résultat d'une année entière de développement par des personnes qui ne sont pas développeurs, il s'agissait d'un unique fichier C\# de sept mille lignes, mélangeant paramètres, données, logique métier, WebMethods ou encore classes d'objets. Le tout avec des fonctions pouvant aller jusqu'au millier de lignes, des signatures de plus de vingt paramètres, des cascades de conditionnelles imbriquées et aucune documentation.\\
 
 \insererfigure{fig/fig20_WFMWebSvcExemple.png}{2cm}{Exemple d'une signature de fonction originelle}{WebSvcEx}
 
-Ce webservice tombant sous la responsabilité de Capgemini, une fois intégré au projet OCEAN, il était primordiale de reprendre ce dernier pour le rendre industrialisable. Et cela en prévision, notamment, de futures évolutions sur ce service, ainsi que de la maintenance de ce dernier.\\
+Ce webservice tombant sous la responsabilité de Capgemini, une fois intégré au projet OCEAN, il était primordial de reprendre ce dernier pour le rendre industrialisable. Cela a été fait en prévision, notamment, de futures évolutions sur ce service, ainsi que de la maintenance de ce dernier.\\
 
 Lors de cette étape, j'ai donc fait en premier lieu de la rétro-ingénierie, afin d'essayer de comprendre la trame globale des appels. Aidé de SonarQube, cela m'a permis de parcourir tout le webservice en corrigeant les nombreux codes smells trouvés par cet outil, tout comme découvrir de possibles bugs.\\
 Ensuite accompagné de Mohammed HAMMAMI et en partageant en deux les tâches, nous avons rédigé la documentation hautement nécessaire du webservice, préparant au découpage en fonctions avec une logique minimale.\\
@@ -627,7 +626,7 @@ Une fois la documentation et le nettoyage d'une majorité des codes smells faite
 \insererfigure{fig/fig12_OceanWebservicesArchi.png}{3cm}{WebServices}{OCEANWebservicesArchibis}
 \end{minipage}
 \begin{minipage}{0.55\textwidth}
-Séparé de telle façon que la façade du webservice soit située dans "Service" afin de jouer le rôle d'API. La logique métier dans "Rules", les appels minimaux vers la solution WFM Genesys dans la section "DAL" et "BO" pour les données et paramètres manipulés.
+Ainsi le webservice a été séparé de la façon suivante: la façade du webservice dans "Service" afin qu'il puisse jouer le rôle d'API; la logique métier dans "Rules"; les appels minimaux vers la solution WFM Genesys dans la section "DAL"; "BO" pour les données et paramètres manipulés.
 \end{minipage}
 \vspace{5mm} %5mm vertical space
 \\
@@ -636,7 +635,7 @@ Cela a été pour moi l'occasion de pratiquer sur une partie encore quelque peu 
 
 \subsubsection{Connections WFM au Front-End}
 
-Une fois le webservice entièrement intégré et fonctionnel, il ne restait plus qu'à connecter les appels à mon Interface Homme Machine (IHM) au travers de la référence du service WFM maintenant créée, tout en s'assurant du bon fonctionnement des requêtes AJAX envoyées par le javascript.\\
+Une fois le webservice entièrement intégré et fonctionnel, il ne restait plus qu'à connecter les appels à mon IHM (Interface Homme Machine) au travers de la référence du service WFM maintenant créée, tout en s'assurant du bon fonctionnement des requêtes AJAX envoyées par le javascript.\\
 
 Mon code arrivant à sa finalisation, l'heure est venue de le faire réviser par une personne avec davantage d'expérience. Ainsi Mohammed HAMMAMI, architecte d'OCEAN, a pu me donner des points d'amélioration ainsi que divers conseils comme l'utilisation de certains composants existant dans la solution pour améliorer l'expérience utilisateur. Cela a permis quelques améliorations de ma part sur mon interface.\\
 
@@ -684,7 +683,8 @@ Ensuite il suffit de comparer et d'étudier les différences dans les paquets pa
 \\
 
 Je me suis donc attelé à la mise en place du protocole pour ce test:\\
-A l'aide de WireShark, j'ai donc pu extraire les paquets échangés entre ces deux éléments puis j'ai pu développer en Batch Windows un script pour ranger et supprimer le surplus d'informationdans des fichiers séparés. Initialement, je voulais le faire en python pour la simplicité, mais ne voulant pas alourdir l'environnement de développement déjà imposant, je me suis orienté vers une technologie que tout le monde avait déjà sur son poste. \\
+A l'aide de WireShark, j'ai donc pu extraire les paquets échangés entre ces deux éléments, puis développer en Batch Windows un script pour ranger et supprimer le surplus d'information de ces exports. Cela m'a permis finalement de passer les différents paquets échangés dans un logiciel de comparaison, de type WinMerge.\\
+Initialement, je voulais rédiger mon script en python pour la simplicité, mais ne voulant pas alourdir l'environnement de développement déjà imposant, je me suis orienté vers une technologie que tout le monde avait déjà sur son poste.\\
 
 
 Cette technique, bien que rébarbative, m'a permis après les premiers passages de déceler quelques erreurs d'inattentions lors du découpage du webservice, pouvant entraîner notamment différents effets de bords indésirables pour la planification.\\
@@ -757,7 +757,7 @@ Ainsi, je vais parler de diverses livraisons et périodes de tests dans lesquell
 \subsubsection{Livraisons}
 
 Une fois une évolution développée, cette dernière va en recette en prévision de la livraison. Cette étape consiste à tester l'application par une tierce personne n'ayant, possiblement, pas développé la partie impactée.\\
-Étant une petite équipe, mais travaillant en parallèle sur plusieurs évolutions, il arriva de nombreuses fois à participer à la livraison en passant des tests.\\
+Étant une petite équipe, mais travaillant en parallèle sur plusieurs évolutions, il m'arriva de nombreuses fois de participer à la livraison en passant des tests.\\
 
 Les deux premières livraisons auxquelles j'ai participé ont été l'occasion pour le projet de passer des tests de non régressions. Ces derniers ont permis de refaire un passage sur la majorité des fonctionnalités de chacune des applications, découvrant parfois quelques bugs. \\
 Elles m'ont permis par la même occassion de me familiariser avec l'environnement découvrant en détail le Bandeau et OCEAN, ainsi que le fonctionnement de la configuration genesys.
@@ -810,14 +810,14 @@ Personnellement, l'expérience a été enrichissante. Des points d'amélioration
 
 \section*{Summary}
 
-The end goal of my internship was to both discover new technologies and corporate world. And I'll have to admit, I wasn't let down, both professionally and personally!\\
+The end goal of my internship was to both discover new technologies and the corporate world. I'll have to admit, I wasn't let down, both professionally and personally!\\
 
 I've been able to take part in a legitimate team of developers. Getting involved in the life cycle of a project, answering diverse issues. Going from needs analysis to delivery, working through development, testing, updating documentation, and maintaining existing solutions. This internship granted me mandatory knowledge on the industrial production of digital solutions.\\
 
 This project allowed me to discover a part of the .NET framework and environment. Something that, to this day, is still relevant in the industry.
 My work was able to be reviewed and criticized by professionals, allowing myself to figure out issues with my choices, before correcting them.\\
 
-Personally, this was a rewarding experience. Some key  improvement was shared with me for my future, and the practice of the profession reassured me.
+Personally, this was a rewarding experience. Some key improvement was shared with me for my future, and the practice of the profession reassured me.
 
 \subsection*{Conclusion}
 Pour résumer, arrivant au terme de mon stage, le bilan me parait très satisfaisant. \\
